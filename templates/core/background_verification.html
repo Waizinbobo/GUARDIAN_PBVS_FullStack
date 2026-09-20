@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GUARDIAN (PBVS)</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { "darkMode": "class", "theme": { "extend": { "colors": { "error": "#ba1a1a", "primary-container": "#131b2e", "surface": "#f7f9fb", "on-secondary": "#ffffff", "on-error": "#ffffff", "primary-fixed": "#dae2fd", "on-background": "#191c1e", "surface-container-low": "#f2f4f6", "surface-bright": "#f7f9fb", "on-error-container": "#93000a", "tertiary-fixed-dim": "#b7c8e1", "secondary-fixed-dim": "#e9c349", "surface-container": "#eceef0", "on-secondary-fixed": "#241a00", "surface-dim": "#d8dadc", "secondary-fixed": "#ffe088", "background": "#f7f9fb", "tertiary-container": "#0b1c30", "inverse-surface": "#2d3133", "on-tertiary-container": "#75859d", "error-container": "#ffdad6", "surface-variant": "#e0e3e5", "on-tertiary-fixed": "#0b1c30", "surface-tint": "#565e74", "tertiary": "#000000", "surface-container-high": "#e6e8ea", "primary": "#000000", "outline": "#76777d", "on-secondary-fixed-variant": "#574500", "on-primary-container": "#7c839b", "on-primary-fixed": "#131b2e", "on-primary-fixed-variant": "#3f465c", "on-surface": "#191c1e", "inverse-on-surface": "#eff1f3", "inverse-primary": "#bec6e0", "secondary-container": "#fed65b", "tertiary-fixed": "#d3e4fe", "surface-container-lowest": "#ffffff", "secondary": "#735c00", "on-tertiary-fixed-variant": "#38485d", "outline-variant": "#c6c6cd", "on-surface-variant": "#45464d", "on-secondary-container": "#745c00", "on-primary": "#ffffff", "surface-container-highest": "#e0e3e5", "on-tertiary": "#ffffff", "primary-fixed-dim": "#bec6e0" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "16px", "container-max": "1440px", "margin-desktop": "32px", "base": "8px", "gutter": "24px" }, "fontFamily": { "label-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "title-lg": ["Inter"], "headline-lg": ["Inter"], "code": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface min-h-screen relative">
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div
+            class="h-20 max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4">
+            <a class="flex items-center gap-3 shrink-0 text-left" data-path="home" href="#">
+                <div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+                    <span class="material-symbols-outlined text-[24px]">verified_user</span></div>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-1.5"><span
+                            class="font-title-lg text-title-lg tracking-tight text-on-surface font-bold">GUARDIAN</span><span
+                            class="font-label-md text-label-md px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">PBVS</span>
+                    </div><span
+                        class="hidden lg:block font-label-md text-[11px] text-on-surface-variant font-medium tracking-normal">Business
+                        Integrity &amp; Risk Information Platform</span>
+                </div>
+            </a>
+            <nav class="hidden xl:flex items-center gap-1"
+                data-active-classes="bg-surface-container text-on-surface font-semibold rounded-lg"><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="home" href="#">Home</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="black-list" href="#">Black List</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="companies" href="#">Companies</a><a aria-current="page"
+                    class="px-3 py-2 transition-colors bg-surface-container text-on-surface font-semibold rounded-lg"
+                    data-path="background-verification" href="#">Background Verification</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="warning-news" href="#">Warning &amp; News</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="about-us" href="#">About Us</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="contact" href="#">Contact</a></nav>
+            <div class="flex items-center gap-3 shrink-0"><a
+                    class="flex items-center gap-2.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary transition-all font-body-md text-body-md font-medium"
+                    data-path="login" href="#"><span class="hidden sm:inline">User Account</span>
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+                </a><button
+                    class="xl:hidden p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+                    type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-screen">
+        <div class="flex flex-col w-full">
+            <!-- Section 1: Hero & Strategic Rationale -->
+            <section class="relative w-full bg-surface-container-lowest overflow-hidden py-12 md:py-20">
+                <!-- Institutional grid backdrop ornament -->
+                <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+                    style="background-image: radial-gradient(#131b2e 1px, transparent 1px); background-size: 24px 24px;">
+                </div>
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                        <div class="lg:col-span-8 flex flex-col gap-5">
+                            <!-- Compliance metadata badge -->
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container w-fit">
+                                <span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                                <span
+                                    class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">PBVS
+                                    Regulatory Compliance Standard · ISO/IEC 27001 Aligned</span>
+                            </div>
+                            <!-- Bilingual Main Headings -->
+                            <div class="flex flex-col gap-2">
+                                <h1 class="font-display-lg text-display-lg text-primary tracking-tight font-bold">
+                                    Protect your Sustainability
+                                </h1>
+                                <h2 class="font-headline-lg text-headline-lg text-secondary font-semibold">
+                                    သင့်လုပ်ငန်း၏ ရေရှည်တည်တံ့မှုကို ကာကွယ်ပါ
+                                </h2>
+                            </div>
+                            <!-- Official Burmese Explanation -->
+                            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+                                လုပ်ငန်းတစ်ခု၏ တည်တံ့ခိုင်မြဲမှုသည် ယုံကြည်စိတ်ချရသော လူပုဂ္ဂိုလ်များနှင့်
+                                အဖွဲ့အစည်းများနှင့် ပူးပေါင်းဆောင်ရွက်နိုင်မှုအပေါ် များစွာ မူတည်ပါသည်။ GUARDIAN သည်
+                                သက်ဆိုင်ရာ အချက်အလက်များကို စနစ်တကျ စစ်ဆေးနိုင်ရန် ကူညီပေးပါသည်။
+                            </p>
+                            <!-- Core verification stats pill row -->
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                                <div class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-1">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Indexed
+                                        Databases</span>
+                                    <span
+                                        class="font-headline-md text-headline-md font-bold text-primary">148,000+</span>
+                                    <span class="font-code text-code text-on-surface-variant">Enterprise &amp;
+                                        Directorships</span>
+                                </div>
+                                <div class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-1">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Sanction
+                                        Match Accuracy</span>
+                                    <span class="font-headline-md text-headline-md font-bold text-primary">99.82%</span>
+                                    <span class="font-code text-code text-on-surface-variant">Multi-Agency
+                                        Triangulation</span>
+                                </div>
+                                <div
+                                    class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-1 col-span-2 sm:col-span-1">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Turnaround
+                                        Latency</span>
+                                    <span
+                                        class="font-headline-md text-headline-md font-bold text-secondary">Real-Time</span>
+                                    <span class="font-code text-code text-on-surface-variant">Automated Registry
+                                        Fetch</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Visual Verification Protocol Radar Graphic -->
+                        <div class="lg:col-span-4 flex flex-col items-center justify-center">
+                            <div
+                                class="w-full max-w-sm rounded-2xl bg-surface-container p-6 flex flex-col gap-5 shadow-sm relative overflow-hidden">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-secondary text-[24px]">verified_user</span>
+                                        <span class="font-title-lg text-title-lg font-bold text-primary">V-Index
+                                            Metric</span>
+                                    </div>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-md text-label-md">LIVE
+                                        AUDIT</span>
+                                </div>
+                                <!-- Mini Inline SVG Chart: Verification Coverage Matrix -->
+                                <div class="relative flex items-center justify-center py-4">
+                                    <svg class="w-48 h-48 -rotate-90" viewbox="0 0 120 120">
+                                        <circle class="text-surface-container-highest" cx="60" cy="60" fill="none"
+                                            r="50" stroke="currentColor" stroke-width="10"></circle>
+                                        <circle class="text-primary-container" cx="60" cy="60" fill="none" r="50"
+                                            stroke="currentColor" stroke-dasharray="314.15" stroke-dashoffset="65"
+                                            stroke-linecap="round" stroke-width="10"></circle>
+                                        <circle class="text-secondary-container" cx="60" cy="60" fill="none" r="38"
+                                            stroke="currentColor" stroke-dasharray="238.76" stroke-dashoffset="75"
+                                            stroke-linecap="round" stroke-width="6"></circle>
+                                    </svg>
+                                    <div class="absolute flex flex-col items-center justify-center text-center">
+                                        <span
+                                            class="font-display-lg text-headline-lg font-bold text-primary">87.4</span>
+                                        <span class="font-label-md text-[10px] uppercase text-on-surface-variant">Global
+                                            Trust Index</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 text-on-surface-variant font-code text-code">
+                                    <div class="flex items-center justify-between">
+                                        <span class="flex items-center gap-1.5"><span
+                                                class="w-2 h-2 rounded-full bg-primary-container"></span> Corporate
+                                            Cross-Registry</span>
+                                        <span class="font-bold text-on-surface">Valid</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="flex items-center gap-1.5"><span
+                                                class="w-2 h-2 rounded-full bg-secondary-container"></span> Non-Profit
+                                            Grant Trail</span>
+                                        <span class="font-bold text-on-surface">Cleared</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="flex items-center gap-1.5"><span
+                                                class="w-2 h-2 rounded-full bg-surface-tint"></span> Executive
+                                            Background</span>
+                                        <span class="font-bold text-on-surface">Screened</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section 2: Three Main Categories -->
+            <section class="w-full bg-surface py-16">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div class="flex flex-col gap-2 mb-10">
+                        <span
+                            class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Verification
+                            Architecture</span>
+                        <h3 class="font-headline-lg text-headline-lg text-primary font-bold">သုံးသပ်စိစစ်မှု ကဏ္ဍကြီး
+                            (၃) ရပ်</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                            GUARDIAN ၏ သမာသမတ်ကျသော အဆင့်အတန်းမြင့် အတည်ပြုစစ်ဆေးမှု မူဘောင်ကို အောက်ပါ အဓိက မဏ္ဍိုင်
+                            (၃) ခုဖြင့် ခွဲခြားသတ်မှတ်ထားပါသည်။
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Card 1: Corporate Status -->
+                        <div
+                            class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                            <div class="flex flex-col gap-6">
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center transition-transform group-hover:scale-105">
+                                    <span class="material-symbols-outlined text-[32px]">domain</span>
+                                </div>
+                                <div class="flex flex-col gap-1.5">
+                                    <span
+                                        class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Enterprise
+                                        Integrity</span>
+                                    <h4 class="font-title-lg text-title-lg font-bold text-primary">Corporate Status</h4>
+                                    <h5 class="font-body-lg text-body-lg text-on-surface font-semibold">ကုမ္ပဏီဆိုင်ရာ
+                                        အခြေအနေ</h5>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    မှတ်ပုံတင် အတည်ပြုချက်၊ ရှယ်ယာပိုင်ဆိုင်မှုဖွဲ့စည်းပုံ၊ ဘဏ္ဍာရေးစာရင်းရှင်းတမ်း
+                                    တရားဝင်မှု၊ စာချုပ်စာတမ်း ချိုးဖောက်မှုရာဇဝင်နှင့် တရားစွဲဆိုခံရမှုများကို
+                                    ပြည့်စုံစွာ ဆန်းစစ်ခြင်း။
+                                </p>
+                            </div>
+                            <div class="pt-8 mt-6 flex items-center justify-between">
+                                <span class="font-code text-code text-on-surface-variant">Class: CORP-KYB</span>
+                                <span
+                                    class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span>
+                            </div>
+                        </div>
+                        <!-- Card 2: Organisation Status -->
+                        <div
+                            class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                            <div class="flex flex-col gap-6">
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center transition-transform group-hover:scale-105">
+                                    <span class="material-symbols-outlined text-[32px]">diversity_3</span>
+                                </div>
+                                <div class="flex flex-col gap-1.5">
+                                    <span
+                                        class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Civil
+                                        &amp; Non-Profit Trust</span>
+                                    <h4 class="font-title-lg text-title-lg font-bold text-primary">Organisation Status
+                                    </h4>
+                                    <h5 class="font-body-lg text-body-lg text-on-surface font-semibold">
+                                        အဖွဲ့အစည်းဆိုင်ရာ အခြေအနေ</h5>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    NGO / INGO များ၏ MOU စာချုပ်ပါ စည်းကမ်းလိုက်နာမှု၊ အလှူရှင်ရန်ပုံငွေ ဘဏ္ဍာရေး
+                                    ပွင့်လင်းမြင်သာမှု၊ လူသားချင်းစာနာမှု ကျင့်ဝတ်စံနှုန်းများနှင့်
+                                    စီမံကိန်းအကောင်အထည်ဖော်မှု တိကျသေချာမှု။
+                                </p>
+                            </div>
+                            <div class="pt-8 mt-6 flex items-center justify-between">
+                                <span class="font-code text-code text-on-surface-variant">Class: ORG-NPO</span>
+                                <span
+                                    class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span>
+                            </div>
+                        </div>
+                        <!-- Card 3: Employee Status -->
+                        <div
+                            class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                            <div class="flex flex-col gap-6">
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center transition-transform group-hover:scale-105">
+                                    <span class="material-symbols-outlined text-[32px]">badge</span>
+                                </div>
+                                <div class="flex flex-col gap-1.5">
+                                    <span
+                                        class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Individual
+                                        Reliability</span>
+                                    <h4 class="font-title-lg text-title-lg font-bold text-primary">Employee Status</h4>
+                                    <h5 class="font-body-lg text-body-lg text-on-surface font-semibold">ဝန်ထမ်းဆိုင်ရာ
+                                        အခြေအနေ</h5>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    အလုပ်အကိုင် ရာဇဝင်၊ ပညာအရည်အချင်း အထောက်အထား မှန်ကန်မှု၊ ကုမ္ပဏီအတွင်း မသမာမှုနှင့်
+                                    ကျင့်ဝတ်ဖောက်ဖျက်မှု မှတ်တမ်းများအား လျှို့ဝှက်လုံခြုံစွာဖြင့် အတည်ပြု စိစစ်ခြင်း။
+                                </p>
+                            </div>
+                            <div class="pt-8 mt-6 flex items-center justify-between">
+                                <span class="font-code text-code text-on-surface-variant">Class: EMP-KYC</span>
+                                <span
+                                    class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section 3: Codified Violations Criteria (Detailed Registry Standards) -->
+            <section class="w-full bg-surface-container-low py-16">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div class="flex flex-col gap-3 mb-12">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface text-on-surface font-label-md text-label-md w-fit">
+                            <span class="material-symbols-outlined text-[16px] text-error">gavel</span>
+                            <span>CODIFIED VIOLATIONS BENCHMARK · ဥပဒေနှင့် စည်းမျဉ်းချိုးဖောက်မှု စံနှုန်းများ</span>
+                        </div>
+                        <h2 class="font-display-lg text-headline-lg text-primary font-bold">
+                            အမည်ပျက်စာရင်းသွင်းခြင်းဆိုင်ရာ သတ်မှတ်ချက်များနှင့် စံညွှန်းများ
+                        </h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                            GUARDIAN စနစ်အတွင်း တိုင်ကြားခံရမှုများနှင့် စုံစမ်းစစ်ဆေးမှုများကို အောက်ပါ တိကျသေချာသော
+                            ဥပဒေနှင့် စီးပွားရေးဆိုင်ရာ စည်းမျဉ်းဖောက်ဖျက်မှု အဆင့်အတန်းများအရ စစ်ဆေးအတည်ပြု
+                            ဆုံးဖြတ်ပါသည်။
+                        </p>
+                    </div>
+                    <!-- CRITERIA SECTION 1: Corporate Violations -->
+                    <div class="mb-14 flex flex-col gap-6">
+                        <div class="flex items-center gap-3 bg-surface-container-lowest p-4 rounded-xl shadow-sm">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold font-code text-code">
+                                SEC-01
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="font-title-lg text-title-lg font-bold text-primary">Corporate Violations</h3>
+                                <span class="font-body-md text-body-md font-semibold text-secondary">အဖွဲ့အစည်းနှင့်
+                                    စီးပွားရေးလုပ်ငန်းဆိုင်ရာ ပြစ်မှုများ</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                            <!-- Item 1.1 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">01</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-md text-label-md">CRITICAL</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        ရင်းနှီးမြှုပ်နှံသူများ သို့မဟုတ် စီးပွားရေးမိတ်ဖက်များ၏ ဘဏ္ဍာရေးနှင့်
+                                        ပိုင်ဆိုင်မှုများကို မသမာသောနည်းဖြင့် လိမ်လည်ထုတ်ယူခြင်း သို့မဟုတ် ပရိယာယ်သုံး၍
+                                        သိမ်းပိုက်ခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: CORP-FRAUD-01
+                                </div>
+                            </div>
+                            <!-- Item 1.2 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">02</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-md text-label-md">IP
+                                            VIOLATION</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        အခြားကုမ္ပဏီများ၏ မူပိုင်ခွင့်၊ Software Architecture၊
+                                        စီးပွားရေးလျှို့ဝှက်ချက်များနှင့် ကုန်အမှတ်တံဆိပ်များကို ခိုးယူသုံးစွဲခြင်း
+                                        သို့မဟုတ် ခွင့်ပြုချက်မရှိဘဲ ကူးယူရောင်းချခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: CORP-IPR-02
+                                </div>
+                            </div>
+                            <!-- Item 1.3 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">03</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-md text-label-md">SAFETY
+                                            RISK</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        လုပ်ငန်းခွင် ဘေးအန္တရာယ်ကင်းရှင်းရေး စံချိန်စံညွှန်းများ ပျက်ကွက်မှုကြောင့်
+                                        ဝန်ထမ်း သို့မဟုတ် အများပြည်သူ၏ အသက်အန္တရာယ်နှင့် ပတ်ဝန်းကျင်ကို ကြီးလေးစွာ
+                                        ထိခိုက်ပျက်စီးစေခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: CORP-HSE-03
+                                </div>
+                            </div>
+                            <!-- Item 1.4 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">04</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-md text-label-md">DEFAULT</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        စီးပွားရေးစာချုပ်ပါ ကတိကဝတ်များကို တမင်သက်သက် ဖောက်ဖျက်ခြင်း၊ ကုန်ပစ္စည်း /
+                                        ဝန်ဆောင်မှု ရယူပြီးနောက် ဘဏ္ဍာရေးပေးချေရန် တာဝန်မဲ့စွာ ပျက်ကွက်ခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: CORP-CNTR-04
+                                </div>
+                            </div>
+                            <!-- Item 1.5 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">05</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-md text-label-md">ILLEGAL</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        တရားဝင် လုပ်ငန်းလိုင်စင်မရှိဘဲ လည်ပတ်ခြင်း၊ တားမြစ်ထားသော မှောင်ခိုဈေးကွက်
+                                        သို့မဟုတ် တရားမဝင် ပစ္စည်း / ဝန်ဆောင်မှုများ ရောင်းချခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: CORP-LIC-05
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CRITERIA SECTION 2: NGO / INGO / Organization Violations -->
+                    <div class="mb-14 flex flex-col gap-6">
+                        <div class="flex items-center gap-3 bg-surface-container-lowest p-4 rounded-xl shadow-sm">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold font-code text-code">
+                                SEC-02
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="font-title-lg text-title-lg font-bold text-primary">NGO / INGO / Organization
+                                    Violations</h3>
+                                <span class="font-body-md text-body-md font-semibold text-secondary">NGO / INGO /
+                                    အဖွဲ့အစည်းဆိုင်ရာ ပြစ်မှုများ</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                            <!-- Item 2.1 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">01</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-md text-label-md">TERROR
+                                            FIN</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        လူသားချင်းစာနာမှု အကူအညီနှင့် ရန်ပုံငွေများကို စစ်သွေးကြွ / တရားမဝင်
+                                        အဖွဲ့အစည်းများ သို့မဟုတ် မသမာသူများထံ လမ်းလွှဲပေးပို့ခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: NGO-DIVERT-01
+                                </div>
+                            </div>
+                            <!-- Item 2.2 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">02</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-md text-label-md">FIN
+                                            FRAUD</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        အလှူရှင်များထံမှ ရန်ပုံငွေများကို အလွဲသုံးစားလုပ်ခြင်း၊ ပရောဂျက်ရလဒ်များနှင့်
+                                        ဘဏ္ဍာရေးစာရင်းဇယား မမှန်မကန် ပြုလုပ်ခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: NGO-GRANT-02
+                                </div>
+                            </div>
+                            <!-- Item 2.3 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">03</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-md text-label-md">SEAH
+                                            BREACH</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        အကူအညီရယူသူ ဒုက္ခသည်များ၊ ကလေးသူငယ်များနှင့် ထိခိုက်လွယ်သူများအပေါ်
+                                        လိင်ပိုင်းဆိုင်ရာ၊ ရုပ်ပိုင်းဆိုင်ရာနှင့် စိတ်ပိုင်းဆိုင်ရာ
+                                        ခေါင်းပုံဖြတ်စော်ကားခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: NGO-PROT-03
+                                </div>
+                            </div>
+                            <!-- Item 2.4 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">04</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-md text-label-md">NEPOTISM</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        ပရောဂျက်ဝယ်ယူရေးနှင့် ဝန်ထမ်း / စေတနာ့ဝန်ထမ်း ခန့်အပ်မှုများတွင်
+                                        လာဘ်ပေးလာဘ်ယူပြုလုပ်ခြင်းနှင့် ဆွေမျိုးကောင်းစားရေး ကျင့်သုံးခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: NGO-PROC-04
+                                </div>
+                            </div>
+                            <!-- Item 2.5 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">05</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-md text-label-md">REGULATORY</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        သက်ဆိုင်ရာနိုင်ငံ၏ ဥပဒေ၊ MOU နှင့် မှတ်ပုံတင်စည်းမျဉ်းများကို မသိကျိုးနွံပြု၍
+                                        တရားမဝင် လှုပ်ရှားဆောင်ရွက်ခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: NGO-MOU-05
+                                </div>
+                            </div>
+                            <!-- Item 2.6 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">06</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-md text-label-md">DATA
+                                            PRIVACY</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        ထိခိုက်လွယ်သော အကူအညီရယူသူများ၏ ကိုယ်ရေးအချက်အလက်များကို ခွင့်ပြုချက်မရှိဘဲ
+                                        ပေါက်ကြားစေခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: NGO-SEC-06
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CRITERIA SECTION 3: Individual Employee Violations -->
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-center gap-3 bg-surface-container-lowest p-4 rounded-xl shadow-sm">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold font-code text-code">
+                                SEC-03
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="font-title-lg text-title-lg font-bold text-primary">Individual Employee
+                                    Violations</h3>
+                                <span class="font-body-md text-body-md font-semibold text-secondary">ဝန်ထမ်းဆိုင်ရာ
+                                    ပြစ်မှုများ</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                            <!-- Item 3.1 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">01</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-md text-label-md">THEFT</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        ကုမ္ပဏီ၏ ဘဏ္ဍာရေး၊ ငွေစာရင်း သို့မဟုတ် စတော့ပစ္စည်းများကို မသမာသောနည်းလမ်းဖြင့်
+                                        ခိုးယူခြင်း၊ အလွဲသုံးစားပြုခြင်း သို့မဟုတ် ကိုယ်ကျိုးအတွက် လိမ်လည်ထုတ်ယူခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: IND-EMB-01
+                                </div>
+                            </div>
+                            <!-- Item 3.2 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">02</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-md text-label-md">ESPIONAGE</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        ကုမ္ပဏီ၏ စီးပွားရေးလျှို့ဝှက်ချက်များ၊ Software Architecture / Code များ၊
+                                        စားသုံးသူဒေတာများနှင့် နည်းပညာများကို ပြင်ပသို့ ခွင့်ပြုချက်မရှိဘဲ
+                                        ထုတ်ရောင်းခြင်း သို့မဟုတ် ခိုးယူသုံးစွဲခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: IND-LEAK-02
+                                </div>
+                            </div>
+                            <!-- Item 3.3 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">03</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-md text-label-md">FORGERY</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        အလုပ်လျှောက်ထားရာတွင် သို့မဟုတ် လုပ်ငန်းခွင်အတွင်း ဘွဲ့လက်မှတ်၊ အလုပ်အတွေ့အကြုံ
+                                        စာရွက်စာတမ်း၊ ထောက်ခံစာ သို့မဟုတ် ကိုယ်ရေးအချက်အလက်များကို အတုပြုလုပ်၍
+                                        လိမ်လည်တင်ပြခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: IND-DOC-03
+                                </div>
+                            </div>
+                            <!-- Item 3.4 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">04</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-md text-label-md">BRIBERY</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        ဝယ်ယူရေး သို့မဟုတ် ရောင်းဝယ်ရေးလုပ်ငန်းစဉ်များတွင် ပြင်ပမိတ်ဖက်များထံမှ
+                                        တရားမဝင်လာဘ်ငွေယူခြင်း သို့မဟုတ် ကုမ္ပဏီထံ အကြောင်းမကြားဘဲ
+                                        ပြိုင်ဘက်လုပ်ငန်းများနှင့် သီးသန့်ပူးပေါင်းဆောင်ရွက်ခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: IND-COI-04
+                                </div>
+                            </div>
+                            <!-- Item 3.5 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">05</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-md text-label-md">CONDUCT</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        လုပ်ငန်းခွင်အတွင်း ကိုယ်ပိုင်း / စိတ်ပိုင်း / လိင်ပိုင်းဆိုင်ရာ
+                                        နှောင့်ယှက်စော်ကားမှုများ ပြုလုပ်ခြင်း၊ အကြမ်းဖက်ခြင်း သို့မဟုတ် လုံခြုံရေးနှင့်
+                                        SOP စည်းမျဉ်းများကို ထပ်ခါတလဲလဲ ချိုးဖောက်၍ အများအန္တရာယ် ဖြစ်စေခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: IND-SAFE-05
+                                </div>
+                            </div>
+                            <!-- Item 3.6 -->
+                            <div
+                                class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex items-center justify-between">
+                                        <span
+                                            class="w-7 h-7 rounded-full bg-surface-container text-primary font-bold font-code text-code flex items-center justify-center">06</span>
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-md text-label-md">DESERTION</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                        တာဝန်ယူထားသော အလုပ်နှင့် စာချုပ်ပါ တာဝန်များကို အဖွဲ့အစည်းထံ
+                                        အကြောင်းကြားခြင်းမရှိဘဲ တာဝန်မဲ့စွာ စနစ်တကျ စွန့်ခွာသွားခြင်း။
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 font-code text-[11px] text-on-surface-variant">Code: IND-ABAN-06
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section 4: Institutional Assurance Protocol & Trust Framework -->
+            <section class="w-full bg-surface-container-lowest py-16">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div class="rounded-3xl bg-primary-container text-on-primary p-8 md:p-12 relative overflow-hidden">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                            <div class="lg:col-span-8 flex flex-col gap-4">
+                                <span
+                                    class="font-label-md text-label-md text-secondary-container uppercase tracking-wider font-bold">Standard
+                                    Operating Protocol</span>
+                                <h3 class="font-headline-lg text-headline-lg font-bold text-on-primary">
+                                    ဘက်မလိုက်သော စစ်ဆေးရေးနည်းလမ်းနှင့် လျှို့ဝှက်ချက်ထိန်းသိမ်းမှု
+                                </h3>
+                                <p
+                                    class="font-body-md text-body-md text-on-primary-container max-w-2xl leading-relaxed">
+                                    GUARDIAN ပလက်ဖောင်းပေါ်ရှိ စစ်ဆေးမှုတိုင်းသည် ဒေတာကာကွယ်ရေး ဥပဒေနှင့်အညီ တင်းကြပ်စွာ
+                                    ဆောင်ရွက်ပြီး စုံစမ်းစစ်ဆေးမှု ရလဒ်များကို အထောက်အထား ခိုင်လုံမှုရှိမရှိ သီးခြား
+                                    စာရင်းစစ်ကော်မတီမှ ၂ ဆ စိစစ် အတည်ပြုပါသည်။
+                                </p>
+                                <div class="flex flex-wrap gap-4 pt-2">
+                                    <div class="flex items-center gap-2 font-code text-code text-on-primary">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-[18px]">verified</span>
+                                        <span>Cryptographic Audit Trails</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 font-code text-code text-on-primary">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-[18px]">lock</span>
+                                        <span>End-to-End Encryption</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 font-code text-code text-on-primary">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-[18px]">fact_check</span>
+                                        <span>Multi-Source Corroboration</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-4 flex flex-col items-start lg:items-end justify-center">
+                                <a class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-secondary-container text-on-secondary-fixed font-bold shadow-lg hover:brightness-105 active:scale-95 transition-all text-body-lg font-body-lg"
+                                    data-path="verification-result" href="#">
+                                    <span class="material-symbols-outlined text-[24px]">search_check</span>
+                                    <span>စစ်ဆေးရန် (Verify)</span>
+                                </a>
+                                <span class="font-code text-[11px] text-on-primary-container mt-2">Immediate
+                                    Institutional Search Result</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Sticky Prominent Call To Action at Lower-Right -->
+            <div class="fixed bottom-6 right-6 z-40">
+                <a class="group flex items-center gap-3 px-6 py-4 rounded-2xl bg-primary-container text-on-primary shadow-[0_8px_30px_rgba(19,27,46,0.35)] hover:bg-tertiary-container hover:scale-105 active:scale-95 transition-all"
+                    data-path="verification-result" href="#">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+                        <span class="material-symbols-outlined text-[20px]">search</span>
+                    </div>
+                    <div class="flex flex-col text-left">
+                        <span class="font-title-lg text-body-lg font-bold text-on-primary">စစ်ဆေးရန် (Verify)</span>
+                        <span class="font-code text-[11px] text-secondary-fixed">Instant PBVS Check</span>
+                    </div>
+                    <span
+                        class="material-symbols-outlined text-[20px] text-on-primary transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </main>
+    <aside class="fixed bottom-6 left-6 z-40"><a
+            class="flex items-center gap-2 px-4 py-3 rounded-full bg-error text-on-error shadow-[0_4px_16px_rgba(0,0,0,0.18)] hover:brightness-110 active:scale-95 transition-all"
+            data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">gavel</span><span
+                class="font-label-md text-label-md font-bold tracking-normal">တိုင်ကြားရန် (Report)</span></a></aside>
+    <footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="lg:col-span-2 flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+                            <span class="material-symbols-outlined text-[20px]">verified_user</span></div>
+                        <div class="flex flex-col"><span
+                                class="font-title-lg text-title-lg font-bold text-on-surface">GUARDIAN
+                                (PBVS)</span><span class="font-label-md text-label-md text-on-surface-variant">Business
+                                Integrity &amp; Risk Information Platform</span></div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Providing institutional-grade
+                        compliance checks, verified enterprise records, and public-interest fraud deterrence for
+                        Myanmar's emerging commercial ecosystem.</p>
+                    <div class="flex items-center gap-2 mt-2"><a aria-label="Facebook"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a
+                            aria-label="LinkedIn"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a
+                            aria-label="TikTok"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">play_circle</span></a><a
+                            aria-label="Telegram"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">send</span></a></div>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Platform
+                        Links</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="home" href="#">Home</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="black-list" href="#">Black List</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="companies" href="#">Companies</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="background-verification" href="#">Background Verification</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="warning-news" href="#">Warning &amp; News</a></nav>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Organization</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="about-us" href="#">About Us</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="contact" href="#">Contact</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="person-profile" href="#">Person Directory</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="company-profile" href="#">Company Registry</a></nav>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Legal
+                        &amp; Trust</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Privacy Policy</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Terms of Use</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Data Protection</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="contact" href="#">Appeal / Report</a></nav>
+                </div>
+            </div>
+            <div
+                class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-md text-body-md text-on-surface-variant">
+                <p>© 2026 GUARDIAN (PBVS). All Rights Reserved.</p>
+                <div class="flex items-center gap-6"><span class="inline-flex items-center gap-1.5"><span
+                            class="w-2 h-2 rounded-full bg-secondary-container"></span>Security
+                        Verified</span><span>Institutional Data Integrity Standard v3.4</span></div>
+            </div>
+        </div>
+    </footer>
+<section class="stitch-functional-panel"><div class="card"><h2>Secure Background Verification</h2><p>Enter exact identifiers. Verification requires lawful consent.</p><form method="post" class="form-grid">{% csrf_token %}{{ verification_form.as_p }}<button class="btn" type="submit">Verify</button></form></div></section><script src="/static/js/guardian.js"></script></body>
+
+</html>

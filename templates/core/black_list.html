@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GUARDIAN (PBVS)</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"error": "#ba1a1a", "primary-container": "#131b2e", "surface": "#f7f9fb", "on-secondary": "#ffffff", "on-error": "#ffffff", "primary-fixed": "#dae2fd", "on-background": "#191c1e", "surface-container-low": "#f2f4f6", "surface-bright": "#f7f9fb", "on-error-container": "#93000a", "tertiary-fixed-dim": "#b7c8e1", "secondary-fixed-dim": "#e9c349", "surface-container": "#eceef0", "on-secondary-fixed": "#241a00", "surface-dim": "#d8dadc", "secondary-fixed": "#ffe088", "background": "#f7f9fb", "tertiary-container": "#0b1c30", "inverse-surface": "#2d3133", "on-tertiary-container": "#75859d", "error-container": "#ffdad6", "surface-variant": "#e0e3e5", "on-tertiary-fixed": "#0b1c30", "surface-tint": "#565e74", "tertiary": "#000000", "surface-container-high": "#e6e8ea", "primary": "#000000", "outline": "#76777d", "on-secondary-fixed-variant": "#574500", "on-primary-container": "#7c839b", "on-primary-fixed": "#131b2e", "on-primary-fixed-variant": "#3f465c", "on-surface": "#191c1e", "inverse-on-surface": "#eff1f3", "inverse-primary": "#bec6e0", "secondary-container": "#fed65b", "tertiary-fixed": "#d3e4fe", "surface-container-lowest": "#ffffff", "secondary": "#735c00", "on-tertiary-fixed-variant": "#38485d", "outline-variant": "#c6c6cd", "on-surface-variant": "#45464d", "on-secondary-container": "#745c00", "on-primary": "#ffffff", "surface-container-highest": "#e0e3e5", "on-tertiary": "#ffffff", "primary-fixed-dim": "#bec6e0"}, "borderRadius": {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"}, "spacing": {"margin-mobile": "16px", "container-max": "1440px", "margin-desktop": "32px", "base": "8px", "gutter": "24px"}, "fontFamily": {"label-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "title-lg": ["Inter"], "headline-lg": ["Inter"], "code": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"]}, "fontSize": {"label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "code": ["13px", {"lineHeight": "18px", "fontWeight": "400"}], "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]}}}};</script>
+</head>
+
+<body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface min-h-screen relative">
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div
+            class="h-20 max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4">
+            <a class="flex items-center gap-3 shrink-0 text-left" data-path="home" href="#">
+                <div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+                    <span class="material-symbols-outlined text-[24px]">verified_user</span></div>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-1.5"><span
+                            class="font-title-lg text-title-lg tracking-tight text-on-surface font-bold">GUARDIAN</span><span
+                            class="font-label-md text-label-md px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">PBVS</span>
+                    </div><span
+                        class="hidden lg:block font-label-md text-[11px] text-on-surface-variant font-medium tracking-normal">Business
+                        Integrity &amp; Risk Information Platform</span>
+                </div>
+            </a>
+            <nav class="hidden xl:flex items-center gap-1"
+                data-active-classes="bg-surface-container text-on-surface font-semibold rounded-lg"><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="home" href="#">Home</a><a aria-current="page"
+                    class="px-3 py-2 transition-colors bg-surface-container text-on-surface font-semibold rounded-lg"
+                    data-path="black-list" href="#">Black List</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="companies" href="#">Companies</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="background-verification" href="#">Background Verification</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="warning-news" href="#">Warning &amp; News</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="about-us" href="#">About Us</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="contact" href="#">Contact</a></nav>
+            <div class="flex items-center gap-3 shrink-0"><a
+                    class="flex items-center gap-2.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary transition-all font-body-md text-body-md font-medium"
+                    data-path="login" href="#"><span class="hidden sm:inline">User Account</span>
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+                </a><button
+                    class="xl:hidden p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+                    type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-screen">
+        <div class="flex flex-col w-full">
+            <section class="w-full bg-surface-container-lowest py-10">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8">
+                        <div class="flex flex-col gap-2.5 max-w-3xl">
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-label-md text-label-md text-on-surface-variant">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                                    PUBLIC INTEGRITY DIRECTORY
+                                </span>
+                                <span class="font-code text-code text-on-surface-variant">SEC-REG-2026-v4</span>
+                            </div>
+                            <h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+                                အန္တရာယ်အချက်အလက်များ</h1>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant">စစ်ဆေးအတည်ပြုထားသော
+                                လုပ်ငန်းခွင်နှင့် အဖွဲ့အစည်းဆိုင်ရာ အချက်အလက်များ (Verified Workplace and Organizational
+                                Risk Records)</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface">
+                                <span class="material-symbols-outlined text-[20px] text-secondary">verified</span>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-label-md text-[11px] uppercase tracking-wider text-on-surface-variant">Active
+                                        Database</span>
+                                    <span class="font-code text-code font-semibold">14,892 Verified Records</span>
+                                </div>
+                            </div>
+                            <a class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface transition-all font-body-md text-body-md font-medium"
+                                data-path="contact" href="#">
+                                <span class="material-symbols-outlined text-[18px]">verified_user</span>
+                                <span>စိစစ်ချက်တောင်းခံရန်</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Quick Metrics Bar -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
+                        <div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+                            <div class="flex flex-col">
+                                <span class="font-label-md text-label-md text-on-surface-variant">Black Listed
+                                    (Critical)</span>
+                                <span class="font-title-lg text-title-lg font-bold text-on-surface mt-0.5">384</span>
+                            </div>
+                            <div
+                                class="w-10 h-10 rounded-lg bg-inverse-surface text-inverse-on-surface flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px]">block</span>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+                            <div class="flex flex-col">
+                                <span class="font-label-md text-label-md text-on-surface-variant">Red (High Risk)</span>
+                                <span class="font-title-lg text-title-lg font-bold text-error mt-0.5">1,120</span>
+                            </div>
+                            <div
+                                class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px]">report_problem</span>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+                            <div class="flex flex-col">
+                                <span class="font-label-md text-label-md text-on-surface-variant">Yellow
+                                    (Monitoring)</span>
+                                <span class="font-title-lg text-title-lg font-bold text-secondary mt-0.5">2,410</span>
+                            </div>
+                            <div
+                                class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px]">visibility</span>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+                            <div class="flex flex-col">
+                                <span class="font-label-md text-label-md text-on-surface-variant">Green (Cleared
+                                    Audit)</span>
+                                <span class="font-title-lg text-title-lg font-bold text-on-surface mt-0.5">10,978</span>
+                            </div>
+                            <div
+                                class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px]">task_alt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SEARCH & FILTER SECTION -->
+            <section class="w-full bg-surface py-8">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div class="p-6 md:p-8 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-6">
+                        <!-- Main Search Bar -->
+                        <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3">
+                            <div class="relative flex-1">
+                                <span
+                                    class="material-symbols-outlined text-outline absolute left-4 top-1/2 -translate-y-1/2 text-[22px]">search</span>
+                                <input
+                                    class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all"
+                                    id="registrySearchInput"
+                                    placeholder="အမည် / Employee ID / NCR No. ဖြင့် ရှာဖွေရန် (Search by Name, ID, NCR...)"
+                                    type="text" />
+                            </div>
+                            <button
+                                class="flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-semibold transition-all shadow-sm active:scale-[0.98] shrink-0"
+                                onclick="applyFilters()" type="button">
+                                <span class="material-symbols-outlined text-[20px]">filter_alt</span>
+                                <span>ရှာဖွေပါ (Execute Search)</span>
+                            </button>
+                        </div>
+                        <!-- Filter Controls -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+                            <!-- Risk Status Filter -->
+                            <div class="flex flex-col gap-1.5">
+                                <label
+                                    class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[16px]">shield</span>
+                                    <span>Risk Status</span>
+                                </label>
+                                <div class="relative">
+                                    <select
+                                        class="w-full appearance-none px-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm cursor-pointer pr-10"
+                                        id="statusFilter">
+                                        <option value="all">Status: All Records</option>
+                                        <option value="black">Black (Critical Risk)</option>
+                                        <option value="red">Red (High Risk)</option>
+                                        <option value="yellow">Yellow (Warning / Monitoring)</option>
+                                        <option value="green">Green (Cleared / Verified)</option>
+                                    </select>
+                                    <span
+                                        class="material-symbols-outlined text-outline pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[18px]">expand_more</span>
+                                </div>
+                            </div>
+                            <!-- Case Type Filter -->
+                            <div class="flex flex-col gap-1.5">
+                                <label
+                                    class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[16px]">gavel</span>
+                                    <span>Case Type (မှုခင်းအမျိုးအစား)</span>
+                                </label>
+                                <div class="relative">
+                                    <select
+                                        class="w-full appearance-none px-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm cursor-pointer pr-10"
+                                        id="caseFilter">
+                                        <option value="all">Case Type: All</option>
+                                        <option value="embezzlement">ငွေကြေးအလွဲသုံးစားမှု (Embezzlement)</option>
+                                        <option value="forgery">မူပိုင်ခွင့်ချိုးဖောက်မှု / စာရွက်စာတမ်းအတု</option>
+                                        <option value="breach">စာချုပ်ဖောက်ဖျက်မှု (Contract Breach)</option>
+                                        <option value="conflict">အကျိုးစီးပွားပဋိပက္ခ (Conflict of Interest)</option>
+                                    </select>
+                                    <span
+                                        class="material-symbols-outlined text-outline pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[18px]">expand_more</span>
+                                </div>
+                            </div>
+                            <!-- Date Filter -->
+                            <div class="flex flex-col gap-1.5">
+                                <label
+                                    class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                                    <span>Audit Period (ရက်စွဲ)</span>
+                                </label>
+                                <div class="relative">
+                                    <select
+                                        class="w-full appearance-none px-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm cursor-pointer pr-10"
+                                        id="dateFilter">
+                                        <option value="all">Date: All Time</option>
+                                        <option value="2026">Recent Q1 2026</option>
+                                        <option value="2025">Year 2025</option>
+                                        <option value="archive">Historical Archive (2020-2024)</option>
+                                    </select>
+                                    <span
+                                        class="material-symbols-outlined text-outline pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[18px]">expand_more</span>
+                                </div>
+                            </div>
+                            <!-- Organisation Type Filter -->
+                            <div class="flex flex-col gap-1.5">
+                                <label
+                                    class="font-label-md text-label-md text-on-surface-variant font-medium flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[16px]">corporate_fare</span>
+                                    <span>Organisation Type</span>
+                                </label>
+                                <div class="relative">
+                                    <select
+                                        class="w-full appearance-none px-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-sm cursor-pointer pr-10"
+                                        id="orgFilter">
+                                        <option value="all">Entity: Corporate / INGO / Indv</option>
+                                        <option value="corporate">Corporate Enterprises</option>
+                                        <option value="ngo">NGO / INGO Organizations</option>
+                                        <option value="individual">Direct Individual Registry</option>
+                                    </select>
+                                    <span
+                                        class="material-symbols-outlined text-outline pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[18px]">expand_more</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Filter Pill Chips -->
+                        <div class="flex flex-wrap items-center gap-2 pt-2">
+                            <span class="font-label-md text-label-md text-on-surface-variant mr-1">Active Filter
+                                Tags:</span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+                                Status: All
+                                <span
+                                    class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error">close</span>
+                            </span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+                                Year: 2026 Active
+                                <span
+                                    class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error">close</span>
+                            </span>
+                            <button
+                                class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface underline ml-auto"
+                                onclick="resetFilters()" type="button">Reset all</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- PUBLIC RISK PROFILE CARDS -->
+            <section class="w-full bg-surface py-6">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <h2 class="font-title-lg text-title-lg font-bold text-on-surface">မှတ်တမ်းတင်ထားသော
+                                ပုဂ္ဂိုလ်များ (Official Risk Dossiers)</h2>
+                            <span
+                                class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">Showing
+                                6 Verified Records</span>
+                        </div>
+                        <div class="hidden sm:flex items-center gap-2 font-code text-code text-on-surface-variant">
+                            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                            Direct Court &amp; Forensic Audited Sync
+                        </div>
+                    </div>
+                    <!-- Grid of 6 Profile Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- CARD 1: U Min Thant -->
+                        <article
+                            class="flex flex-col justify-between rounded-2xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+                            <div class="absolute top-0 left-0 right-0 h-1.5 bg-inverse-surface"></div>
+                            <div>
+                                <div class="flex items-start justify-between gap-4 mb-4">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center shrink-0 overflow-hidden relative">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Official headshot of a middle-aged Southeast Asian corporate executive male in dark formal business suit against a plain institutional gray backdrop, studio lighting, documentary passport style."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV0iX0EZxVlzNkFfn0d8H45sPdqQZd3LbR7xgjmCQ4GEGQTXHx-NFTZw_PrhPjGz3WAYJ2EgNCNoTOYlzy4PrfazzBGHmHKKRcEe_TT0WqcvIXZmgBbuxewGRH5361bPyFsYtQsBIAPclFjsPp7bEv1EpnBWHshPVaZkqmSgee1tkqGCzj16eiG1tSMbxqmN2qGtqlqLFJ2KWR6DWmdzp5udqdks1wsbdmL8edEFARZw56_ZFf6FFuYw" />
+                                        </div>
+                                        <div class="flex flex-col min-w-0">
+                                            <div class="flex items-center gap-1.5">
+                                                <h3
+                                                    class="font-title-lg text-title-lg font-bold text-on-surface truncate">
+                                                    U Min Thant</h3>
+                                                <span
+                                                    class="material-symbols-outlined text-inverse-surface text-[18px]">verified</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-body-md text-on-surface-variant font-medium">Ex-Chief
+                                                Financial Officer (CFO)</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="px-2.5 py-1 rounded-md bg-inverse-surface text-inverse-on-surface font-label-md text-label-md whitespace-nowrap flex items-center gap-1 shrink-0">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></span>
+                                        Black (Critical)
+                                    </span>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2 mb-4">
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Case Primary:</span>
+                                        <span class="font-semibold text-on-surface">ငွေကြေးအလွဲသုံးစားမှု
+                                            (Embezzlement)</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Employee ID:</span>
+                                        <span class="font-code text-code text-on-surface">MM-EMP-88412</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>NRC Identification:</span>
+                                        <span class="font-code text-code text-on-surface">12/LAKANA(N)145022</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Docket Classification:</span>
+                                        <span class="font-code text-code text-error font-medium">Court Judgment / Audit
+                                            #6641</span>
+                                    </div>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+                                    Verified misappropriation of corporate operational funds exceeding 340,000,000 MMK
+                                    documented under forensic audit docket No. 2025/YGN-CRIM-109.
+                                </p>
+                            </div>
+                            <div class="pt-4 flex items-center justify-between bg-surface-container-lowest">
+                                <span class="font-label-md text-[11px] text-on-surface-variant">Updated: 12 Jan
+                                    2026</span>
+                                <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
+                                    data-path="person-profile" href="#">
+                                    <span>အသေးစိတ်ကြည့်ရန်</span>
+                                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- CARD 2: Daw Thida Aye -->
+                        <article
+                            class="flex flex-col justify-between rounded-2xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+                            <div class="absolute top-0 left-0 right-0 h-1.5 bg-error"></div>
+                            <div>
+                                <div class="flex items-start justify-between gap-4 mb-4">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center shrink-0 overflow-hidden relative">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Close up professional portrait of a 40-year-old Myanmar female accountant with formal attire and neat hair, sharp professional lighting, neutral office environment, serious demeanor."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCTOM_kItto14y5CDtM7wEObhLGdWPipSpGiWzqPC_Aya_-3HCY10BQ5M7mTsZfThnGHHLT2Q9QjMKrBIBv3OPD9fU-RQcw4HX48eEsdSrSq3-Ra7hXnbzaulxZT_RYSxwo8h6nXGIJ_IcfxMG5XA2aQlUtVlW8pEtggp3dJpkMzEiY-nRcxxQq_SgrlFi8z-hnUPz1fyRuQEJglU8LSWR22IzT75BiJ5hty1JsXEOu3JadepfUsuSLQ" />
+                                        </div>
+                                        <div class="flex flex-col min-w-0">
+                                            <div class="flex items-center gap-1.5">
+                                                <h3
+                                                    class="font-title-lg text-title-lg font-bold text-on-surface truncate">
+                                                    Daw Thida Aye</h3>
+                                                <span
+                                                    class="material-symbols-outlined text-error text-[18px]">warning</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-body-md text-on-surface-variant font-medium">Senior
+                                                Accountant</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="px-2.5 py-1 rounded-md bg-error-container text-on-error-container font-label-md text-label-md whitespace-nowrap flex items-center gap-1 shrink-0">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                                        Red (High Risk)
+                                    </span>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2 mb-4">
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Case Primary:</span>
+                                        <span class="font-semibold text-on-surface">စာရွက်စာတမ်းအတု (Document
+                                            Forgery)</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Employee ID:</span>
+                                        <span class="font-code text-code text-on-surface">MM-EMP-91204</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>NRC Identification:</span>
+                                        <span class="font-code text-code text-on-surface">12/DAGAMA(N)098211</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Docket Classification:</span>
+                                        <span class="font-code text-code text-error font-medium">Corporate Integrity
+                                            Inquest</span>
+                                    </div>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+                                    Fabrication of supplier tax invoices and unauthorized company signature stamps
+                                    during Q3 external financial compliance screening.
+                                </p>
+                            </div>
+                            <div class="pt-4 flex items-center justify-between bg-surface-container-lowest">
+                                <span class="font-label-md text-[11px] text-on-surface-variant">Updated: 18 Jan
+                                    2026</span>
+                                <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
+                                    data-path="person-profile" href="#">
+                                    <span>အသေးစိတ်ကြည့်ရန်</span>
+                                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- CARD 3: U Ye Naing Htun -->
+                        <article
+                            class="flex flex-col justify-between rounded-2xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+                            <div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary-fixed-dim"></div>
+                            <div>
+                                <div class="flex items-start justify-between gap-4 mb-4">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center shrink-0 overflow-hidden relative">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Portrait photo of a 38 year old Southeast Asian business director man in a buttoned white collared shirt, professional demeanor, corporate neutral lighting."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfGjvojJS_7qcnlQzadNMJLPJyWI_RMuFJNm_sHuzBW5LJIn4HDGygxVmZ3QgabdwWMMr4iX5zdacYUuig-Km6w9B2pBaXD8rRXvxJ8f3qxrfKjdf6JPNE87Ydr0DVkz4dRbGfYshYm_pP_eAae8TKs5Fz35MQZVb315tq7nV-ym6jrhbnxEcC4z13OUqbiK18MBhgASZW_JlJjjgrqI00ufZyTLfG8uZ1nVrRdE4xW96nzrk15JEzXQ" />
+                                        </div>
+                                        <div class="flex flex-col min-w-0">
+                                            <div class="flex items-center gap-1.5">
+                                                <h3
+                                                    class="font-title-lg text-title-lg font-bold text-on-surface truncate">
+                                                    U Ye Naing Htun</h3>
+                                                <span
+                                                    class="material-symbols-outlined text-secondary text-[18px]">info</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-body-md text-on-surface-variant font-medium">Sales
+                                                Director</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="px-2.5 py-1 rounded-md bg-secondary-container text-on-secondary-container font-label-md text-label-md whitespace-nowrap flex items-center gap-1 shrink-0">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                        Yellow (Warning)
+                                    </span>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2 mb-4">
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Case Primary:</span>
+                                        <span class="font-semibold text-on-surface">စာချုပ်ဖောက်ဖျက်မှု (Non-Compete
+                                            Breach)</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Employee ID:</span>
+                                        <span class="font-code text-code text-on-surface">MM-EMP-77391</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>NRC Identification:</span>
+                                        <span class="font-code text-code text-on-surface">14/MAMANA(N)210984</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Docket Classification:</span>
+                                        <span
+                                            class="font-code text-code text-on-surface-variant font-medium">Arbitration
+                                            In-Review</span>
+                                    </div>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+                                    Civil contractual breach regarding proprietary enterprise client pipelines diverted
+                                    to parallel unlisted entity while actively contracted.
+                                </p>
+                            </div>
+                            <div class="pt-4 flex items-center justify-between bg-surface-container-lowest">
+                                <span class="font-label-md text-[11px] text-on-surface-variant">Updated: 02 Feb
+                                    2026</span>
+                                <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
+                                    data-path="person-profile" href="#">
+                                    <span>အသေးစိတ်ကြည့်ရန်</span>
+                                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- CARD 4: Daw Khin Myo Chit -->
+                        <article
+                            class="flex flex-col justify-between rounded-2xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+                            <div class="absolute top-0 left-0 right-0 h-1.5 bg-error"></div>
+                            <div>
+                                <div class="flex items-start justify-between gap-4 mb-4">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center shrink-0 overflow-hidden relative">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Corporate headshot of an Asian woman in dark navy blazer, calm expression, corporate office background with clean muted tones, high fidelity photograph."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL-coORBvXPCs0sb4RBMmrDiLpq-sW7ZBGwAq6OpajreXaVi4C-_vJG_nb13YH-3rNoUd6Jz1kYf0L2jVfNzLWQkXNVUdVtRdYlKpENwkAGCsw7uLEqIUFlL0dSunAa8CZZSB9xh4G6DhBCFzezGCJXk74Ei4GIpYs_bSShh1IjFPUe2SMpaWYrugQ3Pwe5WM86DoW95rdqiaQqZJhNvUkCyleYaf0gQyRUKqWQX9Tyi9PSdnX4_iXjA" />
+                                        </div>
+                                        <div class="flex flex-col min-w-0">
+                                            <div class="flex items-center gap-1.5">
+                                                <h3
+                                                    class="font-title-lg text-title-lg font-bold text-on-surface truncate">
+                                                    Daw Khin Myo Chit</h3>
+                                                <span
+                                                    class="material-symbols-outlined text-error text-[18px]">warning</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-body-md text-on-surface-variant font-medium">Procurement
+                                                Manager</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="px-2.5 py-1 rounded-md bg-error-container text-on-error-container font-label-md text-label-md whitespace-nowrap flex items-center gap-1 shrink-0">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                                        Red (High Risk)
+                                    </span>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2 mb-4">
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Case Primary:</span>
+                                        <span class="font-semibold text-on-surface">အကျိုးစီးပွားပဋိပက္ခ (Conflict of
+                                            Interest)</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Employee ID:</span>
+                                        <span class="font-code text-code text-on-surface">MM-EMP-66219</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>NRC Identification:</span>
+                                        <span class="font-code text-code text-on-surface">09/KAPATA(N)054321</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Docket Classification:</span>
+                                        <span class="font-code text-code text-error font-medium">Tender Fraud
+                                            Confirmation</span>
+                                    </div>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+                                    Direct steering of multi-million kyat institutional procurement contracts to
+                                    undeclared familial logistics vendor entities without disclosure.
+                                </p>
+                            </div>
+                            <div class="pt-4 flex items-center justify-between bg-surface-container-lowest">
+                                <span class="font-label-md text-[11px] text-on-surface-variant">Updated: 25 Jan
+                                    2026</span>
+                                <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
+                                    data-path="person-profile" href="#">
+                                    <span>အသေးစိတ်ကြည့်ရန်</span>
+                                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- CARD 5: U Aung Kyaw Soe -->
+                        <article
+                            class="flex flex-col justify-between rounded-2xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+                            <div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary-fixed-dim"></div>
+                            <div>
+                                <div class="flex items-start justify-between gap-4 mb-4">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center shrink-0 overflow-hidden relative">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Headshot of a middle-aged Southeast Asian man with short black hair in professional attire against a plain office backdrop, high detail."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD7sSJ7UVBOyCbcBwMH6U0stddj4QssmCgfBzIUi71yWgloIsV4As0j95KlXOd9md1jzHQNEv0CxPBPlVii0m47MOfY1vdwiF-zOqQpzXubXowh_6simEachSfznAyg4fCUWQ6G0kCZ0jZdemVZdEvVNC9Uj6obQzRjE1sR3bEFcIIZ8zijonNSxNntUEgGQ5RNg9lgcym_pmDajW1eSsB3-yqCeFMQHjAiSSkmeqVgCvitEFfCut6RQ" />
+                                        </div>
+                                        <div class="flex flex-col min-w-0">
+                                            <div class="flex items-center gap-1.5">
+                                                <h3
+                                                    class="font-title-lg text-title-lg font-bold text-on-surface truncate">
+                                                    U Aung Kyaw Soe</h3>
+                                                <span
+                                                    class="material-symbols-outlined text-secondary text-[18px]">info</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-body-md text-on-surface-variant font-medium">Logistics
+                                                Officer</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="px-2.5 py-1 rounded-md bg-secondary-container text-on-secondary-container font-label-md text-label-md whitespace-nowrap flex items-center gap-1 shrink-0">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                        Yellow (Warning)
+                                    </span>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2 mb-4">
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Case Primary:</span>
+                                        <span
+                                            class="font-semibold text-on-surface">ပိုင်ဆိုင်မှုခွင့်ပြုချက်မဲ့ရောင်းချမှု
+                                            (Asset Disposal)</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Employee ID:</span>
+                                        <span class="font-code text-code text-on-surface">MM-EMP-55102</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>NRC Identification:</span>
+                                        <span class="font-code text-code text-on-surface">12/MAYAKA(N)119832</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Docket Classification:</span>
+                                        <span class="font-code text-code text-on-surface-variant font-medium">Recovery
+                                            Pending</span>
+                                    </div>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+                                    Unauthorized liquidation of heavy machinery spare parts belonging to regional
+                                    distribution hubs; currently undergoing repayment reconciliation.
+                                </p>
+                            </div>
+                            <div class="pt-4 flex items-center justify-between bg-surface-container-lowest">
+                                <span class="font-label-md text-[11px] text-on-surface-variant">Updated: 05 Feb
+                                    2026</span>
+                                <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
+                                    data-path="person-profile" href="#">
+                                    <span>အသေးစိတ်ကြည့်ရန်</span>
+                                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- CARD 6: U Tin Maung Win (Green - Cleared Audit) -->
+                        <article
+                            class="flex flex-col justify-between rounded-2xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+                            <div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary-container"></div>
+                            <div>
+                                <div class="flex items-start justify-between gap-4 mb-4">
+                                    <div class="flex items-center gap-3.5">
+                                        <div
+                                            class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center shrink-0 overflow-hidden relative">
+                                            <img class="w-full h-full object-cover"
+                                                data-alt="Distinguished professional Myanmar senior corporate executive man in dark formal attire, confident pleasant expression, verified professional headshot, high definition photo."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl6o0ARyz1l56tQOsaSv4pWkw0JB_LQy2_KgpQMfd28RvpJfpSKnb_1SZmT4-SEig4h9x_Ol15lBCdMlCqI-SWA8yafMtqmqVIp3RstNf-FOI853gTJobJXI9hKZqtsihpPktc-nT27j066Hzk0vX3GOKj0z3VrQV0yeuIzJI2vRH14lkpY_9BsAM5GTp6UudHFrJpo3i2ghDJxhCb9ib0h_CtdU1InknVM894FzQoyoWl7G9zSfGujQ" />
+                                        </div>
+                                        <div class="flex flex-col min-w-0">
+                                            <div class="flex items-center gap-1.5">
+                                                <h3
+                                                    class="font-title-lg text-title-lg font-bold text-on-surface truncate">
+                                                    U Tin Maung Win</h3>
+                                                <span
+                                                    class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+                                            </div>
+                                            <span
+                                                class="font-body-md text-body-md text-on-surface-variant font-medium">Verified
+                                                Professional</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap flex items-center gap-1 shrink-0">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                        Green (Verified / Good)
+                                    </span>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2 mb-4">
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Compliance Level:</span>
+                                        <span class="font-semibold text-on-surface">Cleared Full Forensic Audit</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Employee ID:</span>
+                                        <span class="font-code text-code text-on-surface">MM-EMP-10293</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>NRC Identification:</span>
+                                        <span class="font-code text-code text-on-surface">12/DAGAMA(N)044120</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+                                        <span>Clearance Certificate:</span>
+                                        <span
+                                            class="font-code text-code text-secondary font-medium">CERT-PBVS-2026-OK</span>
+                                    </div>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">
+                                    All compliance indicators verified clean across banking, corporate governance, and
+                                    civil dispute databases with no adverse findings reported.
+                                </p>
+                            </div>
+                            <div class="pt-4 flex items-center justify-between bg-surface-container-lowest">
+                                <span class="font-label-md text-[11px] text-on-surface-variant">Audited: 28 Jan
+                                    2026</span>
+                                <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
+                                    data-path="person-profile" href="#">
+                                    <span>အသေးစိတ်ကြည့်ရန်</span>
+                                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Pagination / Result Status -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-6 bg-surface">
+                        <div class="font-body-md text-body-md text-on-surface-variant">
+                            Showing <span class="font-semibold text-on-surface">1 - 6</span> of <span
+                                class="font-semibold text-on-surface">14,892</span> records
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button
+                                class="w-10 h-10 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors shadow-sm disabled:opacity-50"
+                                disabled="" type="button">
+                                <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                            </button>
+                            <button
+                                class="w-10 h-10 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-bold"
+                                type="button">1</button>
+                            <button
+                                class="w-10 h-10 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm"
+                                type="button">2</button>
+                            <button
+                                class="w-10 h-10 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm"
+                                type="button">3</button>
+                            <span class="px-2 text-on-surface-variant">...</span>
+                            <button
+                                class="w-10 h-10 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm"
+                                type="button">248</button>
+                            <button
+                                class="w-10 h-10 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors shadow-sm"
+                                type="button">
+                                <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- EVIDENTIARY PRINCIPLE & LEGAL SAFEGUARDS NOTE -->
+            <section class="w-full bg-surface-container-lowest py-12 my-6">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div
+                        class="p-8 md:p-10 rounded-3xl bg-surface-container-low shadow-sm flex flex-col lg:flex-row items-start gap-8">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+                            <span class="material-symbols-outlined text-[32px]">balance</span>
+                        </div>
+                        <div class="flex flex-col gap-4 flex-1">
+                            <div class="flex flex-col gap-1">
+                                <span
+                                    class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">EVIDENTIARY
+                                    PROTOCOL &amp; LEGAL PRINCIPLES</span>
+                                <h2 class="font-title-lg text-title-lg font-bold text-on-surface">အချက်အလက်
+                                    စစ်ဆေးအတည်ပြုခြင်းဆိုင်ရာ ဥပဒေရေးရာ မူဝါဒနှင့် စံချိန်စံညွှန်းများ</h2>
+                            </div>
+                            <div
+                                class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 font-body-md text-body-md text-on-surface-variant">
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center gap-2 text-on-surface font-semibold">
+                                        <span
+                                            class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                                        <span>သက်သေအထောက်အထားဖြင့်သာ မှတ်တမ်းတင်ခြင်း</span>
+                                    </div>
+                                    <p>
+                                        ဤစာရင်းတွင် ဖော်ပြထားသော အချက်အလက်များသည် သာမန်မကျေနပ်ချက်များ၊
+                                        အတင်းအဖျင်းစကားများ (Gossip/Revenge) ကို အခြေခံထားခြင်း လုံးဝမဟုတ်ပါ။
+                                        တရားရုံးမှတ်တမ်းများ၊ အသိအမှတ်ပြု ပြင်ပစာရင်းစစ်ဆေးတွေ့ရှိချက်များ (Forensic
+                                        Audit Reports) နှင့် လုပ်ငန်းခွင်ဆိုင်ရာ ခိုင်လုံသော စုံစမ်းစစ်ဆေးရေး
+                                        ကော်မတီမှတ်တမ်းများကိုသာ တင်းကျပ်စွာ တိုက်ဆိုင်စစ်ဆေးထားခြင်း ဖြစ်ပါသည်။
+                                    </p>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center gap-2 text-on-surface font-semibold">
+                                        <span class="material-symbols-outlined text-secondary text-[18px]">policy</span>
+                                        <span>ကိုယ်ရေးကိုယ်တာ အကာအကွယ်နှင့် အယူခံဝင်ခွင့်</span>
+                                    </div>
+                                    <p>
+                                        ပုဂ္ဂိုလ်ရေးဆိုင်ရာ အချက်အလက်ကာကွယ်မှု ဥပဒေဘောင်အတွင်းမှသာ
+                                        ပြည်သူ့အကျိုးစီးပွားအတွက် လိုအပ်သော လုပ်ငန်းခွင် လုံခြုံရေးဆိုင်ရာ
+                                        အချက်အလက်များကို ထုတ်ပြန်ခြင်း ဖြစ်သည်။ အချက်အလက် မမှန်ကန်မှုရှိပါက သို့မဟုတ်
+                                        ပြန်လည်ဖြေရှင်းပြီးပါက တရားဝင် အထောက်အထားနှင့်အတူ ပြင်ဆင်ရန် အယူခံ (Appeal
+                                        Process) တင်သွင်းနိုင်ပါသည်။
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pt-4 flex flex-wrap items-center justify-between gap-4">
+                                <div class="flex items-center gap-3 text-on-surface-variant font-code text-code">
+                                    <span class="material-symbols-outlined text-[16px]">gavel</span>
+                                    <span>Compliant with Myanmar Commercial Arbitration &amp; Audit Standards Act</span>
+                                </div>
+                                <a class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-semibold transition-colors"
+                                    data-path="contact" href="#">
+                                    <span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+                                    <span>အယူခံလွှာ / အချက်အလက်ပြင်ဆင်ရန် တောင်းဆိုချက် လျှောက်ထားပါ</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Interactive Client Script -->
+            <script>
+                function applyFilters() {
+                    const searchVal = document.getElementById('registrySearchInput').value.toLowerCase();
+                    const statusVal = document.getElementById('statusFilter').value;
+                    const articles = document.querySelectorAll('article');
+
+                    articles.forEach(article => {
+                        const text = article.innerText.toLowerCase();
+                        let matchesSearch = searchVal === '' || text.includes(searchVal);
+                        let matchesStatus = true;
+
+                        if (statusVal === 'black') matchesStatus = text.includes('black');
+                        else if (statusVal === 'red') matchesStatus = text.includes('red');
+                        else if (statusVal === 'yellow') matchesStatus = text.includes('yellow');
+                        else if (statusVal === 'green') matchesStatus = text.includes('green');
+
+                        if (matchesSearch && matchesStatus) {
+                            article.classList.remove('hidden');
+                        } else {
+                            article.classList.add('hidden');
+                        }
+                    });
+                }
+
+                function resetFilters() {
+                    document.getElementById('registrySearchInput').value = '';
+                    document.getElementById('statusFilter').value = 'all';
+                    document.getElementById('caseFilter').value = 'all';
+                    document.getElementById('dateFilter').value = 'all';
+                    document.getElementById('orgFilter').value = 'all';
+
+                    document.querySelectorAll('article').forEach(article => {
+                        article.classList.remove('hidden');
+                    });
+                }
+            </script>
+        </div>
+    </main>
+    <aside class="fixed bottom-6 left-6 z-40"><a
+            class="flex items-center gap-2 px-4 py-3 rounded-full bg-error text-on-error shadow-[0_4px_16px_rgba(0,0,0,0.18)] hover:brightness-110 active:scale-95 transition-all"
+            data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">gavel</span><span
+                class="font-label-md text-label-md font-bold tracking-normal">တိုင်ကြားရန် (Report)</span></a></aside>
+    <footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="lg:col-span-2 flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+                            <span class="material-symbols-outlined text-[20px]">verified_user</span></div>
+                        <div class="flex flex-col"><span
+                                class="font-title-lg text-title-lg font-bold text-on-surface">GUARDIAN
+                                (PBVS)</span><span class="font-label-md text-label-md text-on-surface-variant">Business
+                                Integrity &amp; Risk Information Platform</span></div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Providing institutional-grade
+                        compliance checks, verified enterprise records, and public-interest fraud deterrence for
+                        Myanmar's emerging commercial ecosystem.</p>
+                    <div class="flex items-center gap-2 mt-2"><a aria-label="Facebook"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a
+                            aria-label="LinkedIn"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a
+                            aria-label="TikTok"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">play_circle</span></a><a
+                            aria-label="Telegram"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">send</span></a></div>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Platform
+                        Links</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="home" href="#">Home</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="black-list" href="#">Black List</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="companies" href="#">Companies</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="background-verification" href="#">Background Verification</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="warning-news" href="#">Warning &amp; News</a></nav>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Organization</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="about-us" href="#">About Us</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="contact" href="#">Contact</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="person-profile" href="#">Person Directory</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="company-profile" href="#">Company Registry</a></nav>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Legal
+                        &amp; Trust</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Privacy Policy</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Terms of Use</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Data Protection</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="contact" href="#">Appeal / Report</a></nav>
+                </div>
+            </div>
+            <div
+                class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-md text-body-md text-on-surface-variant">
+                <p>© 2026 GUARDIAN (PBVS). All Rights Reserved.</p>
+                <div class="flex items-center gap-6"><span class="inline-flex items-center gap-1.5"><span
+                            class="w-2 h-2 rounded-full bg-secondary-container"></span>Security
+                        Verified</span><span>Institutional Data Integrity Standard v3.4</span></div>
+            </div>
+        </div>
+    </footer>
+<section class="stitch-functional-panel"><div class="card"><h2>Approved Public Risk Records</h2><div class="responsive-table"><table><tr><th>Subject</th><th>Case Type</th><th>Risk</th><th>Last Update</th></tr>{% for record in risk_records %}<tr><td>{% if record.employee %}{{ record.employee.full_name }} ({{ record.employee.employee_id }}){% else %}{{ record.company.name }}{% endif %}</td><td>{{ record.case.case_type|default:'Risk Record' }}</td><td class="risk-{{ record.risk_level }}">{{ record.get_risk_level_display }}</td><td>{{ record.updated_at }}</td></tr>{% empty %}<tr><td colspan="4">No approved public records.</td></tr>{% endfor %}</table></div></div></section><script src="/static/js/guardian.js"></script></body>
+
+</html>

@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GUARDIAN (PBVS)</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { "darkMode": "class", "theme": { "extend": { "colors": { "error": "#ba1a1a", "primary-container": "#131b2e", "surface": "#f7f9fb", "on-secondary": "#ffffff", "on-error": "#ffffff", "primary-fixed": "#dae2fd", "on-background": "#191c1e", "surface-container-low": "#f2f4f6", "surface-bright": "#f7f9fb", "on-error-container": "#93000a", "tertiary-fixed-dim": "#b7c8e1", "secondary-fixed-dim": "#e9c349", "surface-container": "#eceef0", "on-secondary-fixed": "#241a00", "surface-dim": "#d8dadc", "secondary-fixed": "#ffe088", "background": "#f7f9fb", "tertiary-container": "#0b1c30", "inverse-surface": "#2d3133", "on-tertiary-container": "#75859d", "error-container": "#ffdad6", "surface-variant": "#e0e3e5", "on-tertiary-fixed": "#0b1c30", "surface-tint": "#565e74", "tertiary": "#000000", "surface-container-high": "#e6e8ea", "primary": "#000000", "outline": "#76777d", "on-secondary-fixed-variant": "#574500", "on-primary-container": "#7c839b", "on-primary-fixed": "#131b2e", "on-primary-fixed-variant": "#3f465c", "on-surface": "#191c1e", "inverse-on-surface": "#eff1f3", "inverse-primary": "#bec6e0", "secondary-container": "#fed65b", "tertiary-fixed": "#d3e4fe", "surface-container-lowest": "#ffffff", "secondary": "#735c00", "on-tertiary-fixed-variant": "#38485d", "outline-variant": "#c6c6cd", "on-surface-variant": "#45464d", "on-secondary-container": "#745c00", "on-primary": "#ffffff", "surface-container-highest": "#e0e3e5", "on-tertiary": "#ffffff", "primary-fixed-dim": "#bec6e0" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "16px", "container-max": "1440px", "margin-desktop": "32px", "base": "8px", "gutter": "24px" }, "fontFamily": { "label-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "title-lg": ["Inter"], "headline-lg": ["Inter"], "code": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface min-h-screen relative">
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div
+            class="h-20 max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4">
+            <a class="flex items-center gap-3 shrink-0 text-left" data-path="home" href="#">
+                <div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+                    <span class="material-symbols-outlined text-[24px]">verified_user</span></div>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-1.5"><span
+                            class="font-title-lg text-title-lg tracking-tight text-on-surface font-bold">GUARDIAN</span><span
+                            class="font-label-md text-label-md px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">PBVS</span>
+                    </div><span
+                        class="hidden lg:block font-label-md text-[11px] text-on-surface-variant font-medium tracking-normal">Business
+                        Integrity &amp; Risk Information Platform</span>
+                </div>
+            </a>
+            <nav class="hidden xl:flex items-center gap-1"
+                data-active-classes="bg-surface-container text-on-surface font-semibold rounded-lg"><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="home" href="#">Home</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="black-list" href="#">Black List</a><a aria-current="page"
+                    class="px-3 py-2 transition-colors bg-surface-container text-on-surface font-semibold rounded-lg"
+                    data-path="companies" href="#">Companies</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="background-verification" href="#">Background Verification</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="warning-news" href="#">Warning &amp; News</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="about-us" href="#">About Us</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="contact" href="#">Contact</a></nav>
+            <div class="flex items-center gap-3 shrink-0"><a
+                    class="flex items-center gap-2.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary transition-all font-body-md text-body-md font-medium"
+                    data-path="login" href="#"><span class="hidden sm:inline">User Account</span>
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+                </a><button
+                    class="xl:hidden p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+                    type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-screen">
+        <div class="flex flex-col w-full">
+            <!-- Command Header & Breadcrumb Strip -->
+            <section class="w-full bg-surface-container-lowest shadow-sm">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-12">
+                    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+                        <div class="flex flex-col gap-2 max-w-3xl">
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="font-label-md text-label-md uppercase tracking-wider text-secondary flex items-center gap-1.5">
+                                    <span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+                                    Institutional Registry &amp; Verification Index
+                                </span>
+                                <span class="text-outline-variant font-code text-code">/</span>
+                                <span class="font-label-md text-label-md text-on-surface-variant font-code">DICA-SYNC:
+                                    2026.04.18</span>
+                            </div>
+                            <h1
+                                class="font-display-lg text-headline-lg md:text-display-lg text-primary tracking-tight font-bold">
+                                ကုမ္ပဏီများ <span
+                                    class="font-title-lg text-title-lg text-on-surface-variant font-normal tracking-normal">(Companies)</span>
+                            </h1>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant">
+                                လုပ်ငန်းအဖွဲ့အစည်းများ၏ စစ်ဆေးအတည်ပြုထားသော အချက်အလက်များ (Verified Information and Risk
+                                Status of Enterprises and Organizations)
+                            </p>
+                        </div>
+                        <!-- Institutional Metrics Ribbon -->
+                        <div class="flex items-stretch gap-3 sm:gap-4 overflow-x-auto pb-2 lg:pb-0">
+                            <div
+                                class="flex flex-col justify-center px-4 py-3 rounded-xl bg-surface-container-low min-w-[130px]">
+                                <span
+                                    class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Audited
+                                    Entities</span>
+                                <span class="font-headline-md text-headline-md font-bold text-primary">1,480+</span>
+                                <span class="font-label-md text-[11px] text-secondary font-medium mt-0.5">Active
+                                    Surveillance</span>
+                            </div>
+                            <div
+                                class="flex flex-col justify-center px-4 py-3 rounded-xl bg-surface-container-low min-w-[140px]">
+                                <span
+                                    class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Legal
+                                    Defensibility</span>
+                                <span class="font-headline-md text-headline-md font-bold text-primary">99.4%</span>
+                                <span
+                                    class="font-label-md text-[11px] text-on-surface-variant font-medium mt-0.5">Courtroom
+                                    Standards</span>
+                            </div>
+                            <div
+                                class="flex flex-col justify-center px-4 py-3 rounded-xl bg-surface-container-low min-w-[130px]">
+                                <span
+                                    class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DICA
+                                    Pipeline</span>
+                                <span
+                                    class="font-headline-md text-headline-md font-bold text-secondary flex items-center gap-1">
+                                    SYNCED
+                                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                                </span>
+                                <span
+                                    class="font-label-md text-[11px] text-on-surface-variant font-medium mt-0.5">Hourly
+                                    Differential</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Interactive Search & Precision Multi-Filter Toolbar -->
+            <section class="w-full bg-surface-container-low py-6 shadow-inner">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <form class="flex flex-col gap-4" id="filterForm"
+                        onsubmit="event.preventDefault(); applyCompanyFilters();">
+                        <!-- Main Search Bar -->
+                        <div class="flex flex-col md:flex-row items-center gap-3">
+                            <div class="relative w-full flex-1">
+                                <div
+                                    class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-[22px]">domain</span>
+                                </div>
+                                <input
+                                    class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-surface-container-lowest font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-sm transition-all"
+                                    id="companySearchInput"
+                                    placeholder="ကုမ္ပဏီအမည်ဖြင့် ရှာဖွေရန် (Search by Company Name or Registration ID)..."
+                                    type="text" />
+                                <div class="absolute inset-y-0 right-3 flex items-center gap-2">
+                                    <span
+                                        class="hidden sm:inline-block px-2 py-1 rounded bg-surface-container text-[11px] font-code text-on-surface-variant">⌘K</span>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full md:w-auto px-8 py-3.5 rounded-xl bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2.5 shadow-md active:scale-98 transition-all shrink-0"
+                                type="submit">
+                                <span class="material-symbols-outlined text-[20px]">search</span>
+                                <span>ရှာဖွေရန် (Search Index)</span>
+                            </button>
+                        </div>
+                        <!-- Secondary Filtering Matrix -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2">
+                            <!-- Industry Filter -->
+                            <div class="flex flex-col gap-1.5">
+                                <label
+                                    class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant flex items-center gap-1.5"
+                                    for="industrySelect">
+                                    <span class="material-symbols-outlined text-[16px]">category</span>
+                                    Industry Classification
+                                </label>
+                                <div class="relative">
+                                    <select
+                                        class="w-full appearance-none pl-3.5 pr-9 py-2.5 rounded-lg bg-surface-container-lowest font-body-md text-body-md text-on-surface focus:outline-none shadow-sm cursor-pointer"
+                                        id="industrySelect" onchange="applyCompanyFilters()">
+                                        <option value="all">All Industries (အားလုံး)</option>
+                                        <option value="Logistics &amp; Supply Chain">Logistics &amp; Supply Chain
+                                        </option>
+                                        <option value="Financial Services">Financial Services</option>
+                                        <option value="Technology &amp; IT">Technology &amp; IT</option>
+                                        <option value="Construction">Construction &amp; Real Estate</option>
+                                        <option value="Trading">Trading (Import / Export)</option>
+                                    </select>
+                                    <span
+                                        class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">expand_more</span>
+                                </div>
+                            </div>
+                            <!-- Location Filter -->
+                            <div class="flex flex-col gap-1.5">
+                                <label
+                                    class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant flex items-center gap-1.5"
+                                    for="locationSelect">
+                                    <span class="material-symbols-outlined text-[16px]">pin_drop</span>
+                                    Jurisdiction &amp; Location
+                                </label>
+                                <div class="relative">
+                                    <select
+                                        class="w-full appearance-none pl-3.5 pr-9 py-2.5 rounded-lg bg-surface-container-lowest font-body-md text-body-md text-on-surface focus:outline-none shadow-sm cursor-pointer"
+                                        id="locationSelect" onchange="applyCompanyFilters()">
+                                        <option value="all">All Jurisdictions (နေရာအားလုံး)</option>
+                                        <option value="Yangon">Yangon Region</option>
+                                        <option value="Mandalay">Mandalay Region</option>
+                                        <option value="Naypyitaw">Naypyitaw Union Territory</option>
+                                        <option value="Regional">Regional Special Economic Zones</option>
+                                    </select>
+                                    <span
+                                        class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">expand_more</span>
+                                </div>
+                            </div>
+                            <!-- Verification Risk Status Filter -->
+                            <div class="flex flex-col gap-1.5">
+                                <label
+                                    class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant flex items-center gap-1.5"
+                                    for="riskSelect">
+                                    <span class="material-symbols-outlined text-[16px]">security</span>
+                                    Surveillance / Risk Status
+                                </label>
+                                <div class="relative">
+                                    <select
+                                        class="w-full appearance-none pl-3.5 pr-9 py-2.5 rounded-lg bg-surface-container-lowest font-body-md text-body-md text-on-surface focus:outline-none shadow-sm cursor-pointer"
+                                        id="riskSelect" onchange="applyCompanyFilters()">
+                                        <option value="all">All Verification Statuses</option>
+                                        <option value="green">Verified Active (Whitelist / Low Risk)</option>
+                                        <option value="yellow">Under Inquiry / Monitoring</option>
+                                        <option value="red">High Risk (Legal Notice / Revocation)</option>
+                                        <option value="black">Critical Risk (Court Asset Freeze)</option>
+                                    </select>
+                                    <span
+                                        class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">expand_more</span>
+                                </div>
+                            </div>
+                            <!-- Reset & Quick Actions -->
+                            <div class="flex flex-col justify-end">
+                                <div class="flex items-center gap-2">
+                                    <button
+                                        class="w-full py-2.5 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-body-md text-body-md font-medium transition-colors flex items-center justify-center gap-1.5 shadow-sm"
+                                        onclick="resetFilters()" type="button">
+                                        <span class="material-symbols-outlined text-[18px]">restart_alt</span>
+                                        Reset Filters
+                                    </button>
+                                    <div
+                                        class="flex items-center px-3 py-2.5 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface-variant">
+                                        <span class="font-code text-code font-bold text-primary whitespace-nowrap"
+                                            id="resultsCountBadge">6 Records</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <!-- Live Enterprise Directory Cards Grid -->
+            <section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-12">
+                <!-- Active Filter Chips / Status Overview -->
+                <div class="flex flex-wrap items-center justify-between gap-4 pb-6">
+                    <div class="flex items-center gap-2 flex-wrap text-on-surface-variant font-body-md text-body-md">
+                        <span class="font-medium text-on-surface">Audited Registrations:</span>
+                        <span
+                            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant text-label-md font-label-md">
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                            PBVS Corporate Ledger
+                        </span>
+                        <span
+                            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant text-label-md font-label-md">
+                            Court Judgment Integration active
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="font-label-md text-label-md text-on-surface-variant">Sort By:</span>
+                        <div class="inline-flex rounded-lg bg-surface-container p-0.5">
+                            <button
+                                class="px-3 py-1 text-label-md font-label-md rounded-md bg-surface-container-lowest text-primary shadow-sm">Severity
+                                / Date</button>
+                            <button
+                                class="px-3 py-1 text-label-md font-label-md rounded-md text-on-surface-variant hover:text-on-surface">Alphabetical</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Company Grid Container (6 Enterprise Cards) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="companyGrid">
+                    <!-- CARD 1: Golden Apex Global Logistics (RED - High Risk) -->
+                    <article
+                        class="company-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all group relative overflow-hidden"
+                        data-company="golden apex global logistics" data-industry="Logistics &amp; Supply Chain"
+                        data-location="Yangon" data-risk="red">
+                        <!-- Top Status Bar Indicator -->
+                        <div class="h-2 w-full bg-error"></div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <!-- Card Header & Badge -->
+                            <div class="flex items-start justify-between gap-3 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-[26px]">local_shipping</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-bold">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                                        RED // HIGH RISK
+                                    </span>
+                                    <span
+                                        class="font-code text-[11px] text-on-surface-variant mt-1">PBVS-LOG-8819</span>
+                                </div>
+                            </div>
+                            <!-- Enterprise Identification -->
+                            <div class="flex flex-col gap-1 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Logistics
+                                        &amp; Freight</span>
+                                    <span class="text-outline-variant">•</span>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant flex items-center gap-0.5">
+                                        <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                        Yangon
+                                    </span>
+                                </div>
+                                <h2
+                                    class="font-title-lg text-title-lg font-bold text-primary group-hover:text-primary-container transition-colors">
+                                    Golden Apex Global Logistics
+                                </h2>
+                                <p class="font-code text-code text-on-surface-variant">DICA Reg: 108392019 / Inland
+                                    Clearance</p>
+                            </div>
+                            <!-- Risk Detail Banner -->
+                            <div class="p-3.5 rounded-xl bg-error-container/40 flex flex-col gap-1.5 mb-5">
+                                <div
+                                    class="flex items-center gap-1.5 text-on-error-container font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[18px]">warning</span>
+                                    Customs &amp; Regulatory Infraction
+                                </div>
+                                <p class="font-body-md text-[13px] leading-snug text-on-surface-variant">
+                                    Export License Revocation &amp; Customs Irregularity. Multiple unmanifested cargo
+                                    disputes under ministerial review.
+                                </p>
+                            </div>
+                            <!-- Compliance Metadata Metric Box -->
+                            <div
+                                class="mt-auto pt-4 border-t border-surface-container flex items-center justify-between font-code text-[12px] text-on-surface-variant">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-label-md text-[10px] uppercase tracking-wider text-outline">Verified
+                                        Audit</span>
+                                    <span class="font-semibold text-primary">Jan 2026</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span
+                                        class="font-label-md text-[10px] uppercase tracking-wider text-outline">Sanction
+                                        Ref</span>
+                                    <span class="font-semibold text-error">CUSTOMS-DIV-09</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Action Footer -->
+                        <div class="p-6 pt-0">
+                            <a class="w-full py-3 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2 group-hover:bg-primary-container group-hover:text-on-primary transition-all"
+                                data-path="company-profile" href="#">
+                                <span>ကုမ္ပဏီအချက်အလက် ကြည့်ရန်</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- CARD 2: Nexus Industrial Developments (BLACK - Critical Risk) -->
+                    <article
+                        class="company-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all group relative overflow-hidden"
+                        data-company="nexus industrial developments" data-industry="Construction"
+                        data-location="Mandalay" data-risk="black">
+                        <!-- Top Status Bar Indicator (Critical Black) -->
+                        <div class="h-2 w-full bg-inverse-surface"></div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <!-- Card Header & Badge -->
+                            <div class="flex items-start justify-between gap-3 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-inverse-surface text-inverse-on-surface flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-[26px]">apartment</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md font-bold">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-error-container"></span>
+                                        BLACK // CRITICAL RISK
+                                    </span>
+                                    <span
+                                        class="font-code text-[11px] text-on-surface-variant mt-1">PBVS-CON-5102</span>
+                                </div>
+                            </div>
+                            <!-- Enterprise Identification -->
+                            <div class="flex flex-col gap-1 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Construction
+                                        &amp; Real Estate</span>
+                                    <span class="text-outline-variant">•</span>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant flex items-center gap-0.5">
+                                        <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                        Mandalay
+                                    </span>
+                                </div>
+                                <h2
+                                    class="font-title-lg text-title-lg font-bold text-primary group-hover:text-primary-container transition-colors">
+                                    Nexus Industrial Developments
+                                </h2>
+                                <p class="font-code text-code text-on-surface-variant">DICA Reg: 219033481 / Industrial
+                                    Zone</p>
+                            </div>
+                            <!-- Risk Detail Banner -->
+                            <div class="p-3.5 rounded-xl bg-surface-container-highest flex flex-col gap-1.5 mb-5">
+                                <div
+                                    class="flex items-center gap-1.5 text-inverse-surface font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[18px]">gavel</span>
+                                    Court Order &amp; Solvency Warning
+                                </div>
+                                <p class="font-body-md text-[13px] leading-snug text-on-surface-variant">
+                                    Court Asset Freeze &amp; Debt Repudiation. Commercial High Court Warrant active
+                                    regarding defaulted development guarantees.
+                                </p>
+                            </div>
+                            <!-- Compliance Metadata Metric Box -->
+                            <div
+                                class="mt-auto pt-4 border-t border-surface-container flex items-center justify-between font-code text-[12px] text-on-surface-variant">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-label-md text-[10px] uppercase tracking-wider text-outline">Verified
+                                        Audit</span>
+                                    <span class="font-semibold text-primary">Dec 2025</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span
+                                        class="font-label-md text-[10px] uppercase tracking-wider text-outline">Judicial
+                                        Seal</span>
+                                    <span class="font-semibold text-on-surface">MDY-HC-0482</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Action Footer -->
+                        <div class="p-6 pt-0">
+                            <a class="w-full py-3 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2 group-hover:bg-primary-container group-hover:text-on-primary transition-all"
+                                data-path="company-profile" href="#">
+                                <span>ကုမ္ပဏီအချက်အလက် ကြည့်ရန်</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- CARD 3: Apex Supply Chain Solutions (GREEN - Whitelist / AAA) -->
+                    <article
+                        class="company-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all group relative overflow-hidden"
+                        data-company="apex supply chain solutions" data-industry="Logistics &amp; Supply Chain"
+                        data-location="Yangon" data-risk="green">
+                        <!-- Top Status Bar Indicator (Verified Security Gold / Premium Accent) -->
+                        <div class="h-2 w-full bg-secondary-container"></div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <!-- Card Header & Badge -->
+                            <div class="flex items-start justify-between gap-3 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-secondary-fixed/50 text-secondary flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-[26px]">verified</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold">
+                                        <span class="material-symbols-outlined text-[14px]">check_circle</span>
+                                        VERIFIED // GRADE AAA
+                                    </span>
+                                    <span
+                                        class="font-code text-[11px] text-on-surface-variant mt-1">PBVS-PRO-1002</span>
+                                </div>
+                            </div>
+                            <!-- Enterprise Identification -->
+                            <div class="flex flex-col gap-1 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Procurement
+                                        Services</span>
+                                    <span class="text-outline-variant">•</span>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant flex items-center gap-0.5">
+                                        <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                        Yangon
+                                    </span>
+                                </div>
+                                <h2
+                                    class="font-title-lg text-title-lg font-bold text-primary group-hover:text-primary-container transition-colors">
+                                    Apex Supply Chain Solutions
+                                </h2>
+                                <p class="font-code text-code text-on-surface-variant">DICA Reg: 199384910 / Commercial
+                                    Whitelist</p>
+                            </div>
+                            <!-- Risk Detail Banner -->
+                            <div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5 mb-5">
+                                <div
+                                    class="flex items-center gap-1.5 text-secondary font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[18px]">verified_user</span>
+                                    Institutional Whitelist Validated
+                                </div>
+                                <p class="font-body-md text-[13px] leading-snug text-on-surface-variant">
+                                    Full evidentiary transparency. Clean audited records across customs, institutional
+                                    tenders, and commercial banking guarantees.
+                                </p>
+                            </div>
+                            <!-- Compliance Metadata Metric Box -->
+                            <div
+                                class="mt-auto pt-4 border-t border-surface-container flex items-center justify-between font-code text-[12px] text-on-surface-variant">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-label-md text-[10px] uppercase tracking-wider text-outline">Verified
+                                        Audit</span>
+                                    <span class="font-semibold text-primary">Mar 2026</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span
+                                        class="font-label-md text-[10px] uppercase tracking-wider text-outline">Integrity
+                                        Tier</span>
+                                    <span class="font-semibold text-secondary">TIER 1 CLEARED</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Action Footer -->
+                        <div class="p-6 pt-0">
+                            <a class="w-full py-3 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2 group-hover:bg-primary-container group-hover:text-on-primary transition-all"
+                                data-path="company-profile" href="#">
+                                <span>ကုမ္ပဏီအချက်အလက် ကြည့်ရန်</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- CARD 4: Horizon Telecommunications Group (YELLOW - Monitoring) -->
+                    <article
+                        class="company-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all group relative overflow-hidden"
+                        data-company="horizon telecommunications group" data-industry="Technology &amp; IT"
+                        data-location="Naypyitaw" data-risk="yellow">
+                        <!-- Top Status Bar Indicator (Yellow / Monitoring) -->
+                        <div class="h-2 w-full bg-secondary"></div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <!-- Card Header & Badge -->
+                            <div class="flex items-start justify-between gap-3 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-secondary-fixed-dim/40 text-on-secondary-fixed flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-[26px]">cell_tower</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed-dim/60 text-on-secondary-fixed font-label-md text-label-md font-bold">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                                        YELLOW // MONITORING
+                                    </span>
+                                    <span
+                                        class="font-code text-[11px] text-on-surface-variant mt-1">PBVS-TEL-3991</span>
+                                </div>
+                            </div>
+                            <!-- Enterprise Identification -->
+                            <div class="flex flex-col gap-1 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Telecommunications</span>
+                                    <span class="text-outline-variant">•</span>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant flex items-center gap-0.5">
+                                        <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                        Naypyitaw
+                                    </span>
+                                </div>
+                                <h2
+                                    class="font-title-lg text-title-lg font-bold text-primary group-hover:text-primary-container transition-colors">
+                                    Horizon Telecommunications Group
+                                </h2>
+                                <p class="font-code text-code text-on-surface-variant">DICA Reg: 140029381 / Union
+                                    Concession</p>
+                            </div>
+                            <!-- Risk Detail Banner -->
+                            <div class="p-3.5 rounded-xl bg-surface-container flex flex-col gap-1.5 mb-5">
+                                <div
+                                    class="flex items-center gap-1.5 text-secondary font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[18px]">rule</span>
+                                    Active Contractual Dispute
+                                </div>
+                                <p class="font-body-md text-[13px] leading-snug text-on-surface-variant">
+                                    Ongoing civil litigation regarding fiber-optic transit rights and non-compliance
+                                    arbitration in the central region.
+                                </p>
+                            </div>
+                            <!-- Compliance Metadata Metric Box -->
+                            <div
+                                class="mt-auto pt-4 border-t border-surface-container flex items-center justify-between font-code text-[12px] text-on-surface-variant">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-label-md text-[10px] uppercase tracking-wider text-outline">Verified
+                                        Audit</span>
+                                    <span class="font-semibold text-primary">Feb 2026</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span
+                                        class="font-label-md text-[10px] uppercase tracking-wider text-outline">Hearing
+                                        Status</span>
+                                    <span class="font-semibold text-on-surface">PENDING RULING</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Action Footer -->
+                        <div class="p-6 pt-0">
+                            <a class="w-full py-3 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2 group-hover:bg-primary-container group-hover:text-on-primary transition-all"
+                                data-path="company-profile" href="#">
+                                <span>ကုမ္ပဏီအချက်အလက် ကြည့်ရန်</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- CARD 5: Myanmar Golden Tech Group (GREEN - Clean Record) -->
+                    <article
+                        class="company-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all group relative overflow-hidden"
+                        data-company="myanmar golden tech group" data-industry="Technology &amp; IT"
+                        data-location="Yangon" data-risk="green">
+                        <!-- Top Status Bar Indicator (Verified Security Gold) -->
+                        <div class="h-2 w-full bg-secondary-container"></div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <!-- Card Header & Badge -->
+                            <div class="flex items-start justify-between gap-3 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-secondary-fixed/50 text-secondary flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-[26px]">terminal</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold">
+                                        <span class="material-symbols-outlined text-[14px]">task_alt</span>
+                                        VERIFIED CLEAN
+                                    </span>
+                                    <span
+                                        class="font-code text-[11px] text-on-surface-variant mt-1">PBVS-TECH-0419</span>
+                                </div>
+                            </div>
+                            <!-- Enterprise Identification -->
+                            <div class="flex flex-col gap-1 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Software
+                                        &amp; IT Services</span>
+                                    <span class="text-outline-variant">•</span>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant flex items-center gap-0.5">
+                                        <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                        Yangon
+                                    </span>
+                                </div>
+                                <h2
+                                    class="font-title-lg text-title-lg font-bold text-primary group-hover:text-primary-container transition-colors">
+                                    Myanmar Golden Tech Group
+                                </h2>
+                                <p class="font-code text-code text-on-surface-variant">DICA Reg: 168294022 / Digital
+                                    Infrastructure</p>
+                            </div>
+                            <!-- Risk Detail Banner -->
+                            <div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5 mb-5">
+                                <div
+                                    class="flex items-center gap-1.5 text-secondary font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                                    DICA &amp; Tax Compliant
+                                </div>
+                                <p class="font-body-md text-[13px] leading-snug text-on-surface-variant">
+                                    Comprehensive filing compliance verified. Zero active litigation filings, full IRD
+                                    corporate tax clearance confirmed.
+                                </p>
+                            </div>
+                            <!-- Compliance Metadata Metric Box -->
+                            <div
+                                class="mt-auto pt-4 border-t border-surface-container flex items-center justify-between font-code text-[12px] text-on-surface-variant">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-label-md text-[10px] uppercase tracking-wider text-outline">Verified
+                                        Audit</span>
+                                    <span class="font-semibold text-primary">Apr 2026</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span class="font-label-md text-[10px] uppercase tracking-wider text-outline">Tax
+                                        Status</span>
+                                    <span class="font-semibold text-secondary">IRD CERTIFIED</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Action Footer -->
+                        <div class="p-6 pt-0">
+                            <a class="w-full py-3 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2 group-hover:bg-primary-container group-hover:text-on-primary transition-all"
+                                data-path="company-profile" href="#">
+                                <span>ကုမ္ပဏီအချက်အလက် ကြည့်ရန်</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- CARD 6: Delta Star Trading Co., Ltd. (RED - High Risk) -->
+                    <article
+                        class="company-card flex flex-col justify-between bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all group relative overflow-hidden"
+                        data-company="delta star trading co" data-industry="Trading" data-location="Yangon"
+                        data-risk="red">
+                        <!-- Top Status Bar Indicator (High Risk Red) -->
+                        <div class="h-2 w-full bg-error"></div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <!-- Card Header & Badge -->
+                            <div class="flex items-start justify-between gap-3 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-[26px]">swap_horizontal_circle</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-bold">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                                        RED // HIGH RISK
+                                    </span>
+                                    <span
+                                        class="font-code text-[11px] text-on-surface-variant mt-1">PBVS-TRD-7612</span>
+                                </div>
+                            </div>
+                            <!-- Enterprise Identification -->
+                            <div class="flex flex-col gap-1 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Import
+                                        / Export</span>
+                                    <span class="text-outline-variant">•</span>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant flex items-center gap-0.5">
+                                        <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                        Yangon
+                                    </span>
+                                </div>
+                                <h2
+                                    class="font-title-lg text-title-lg font-bold text-primary group-hover:text-primary-container transition-colors">
+                                    Delta Star Trading Co., Ltd.
+                                </h2>
+                                <p class="font-code text-code text-on-surface-variant">DICA Reg: Suspended // Commercial
+                                    Barred</p>
+                            </div>
+                            <!-- Risk Detail Banner -->
+                            <div class="p-3.5 rounded-xl bg-error-container/40 flex flex-col gap-1.5 mb-5">
+                                <div
+                                    class="flex items-center gap-1.5 text-on-error-container font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[18px]">report_problem</span>
+                                    Unregistered Commercial Trading
+                                </div>
+                                <p class="font-body-md text-[13px] leading-snug text-on-surface-variant">
+                                    Operating without authorized secondary trade licensing. Multiple third-party
+                                    supplier non-payment claims reported.
+                                </p>
+                            </div>
+                            <!-- Compliance Metadata Metric Box -->
+                            <div
+                                class="mt-auto pt-4 border-t border-surface-container flex items-center justify-between font-code text-[12px] text-on-surface-variant">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-label-md text-[10px] uppercase tracking-wider text-outline">Verified
+                                        Audit</span>
+                                    <span class="font-semibold text-primary">Jan 2026</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span
+                                        class="font-label-md text-[10px] uppercase tracking-wider text-outline">Ministry
+                                        Action</span>
+                                    <span class="font-semibold text-error">BARRED EXPORT</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Action Footer -->
+                        <div class="p-6 pt-0">
+                            <a class="w-full py-3 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2 group-hover:bg-primary-container group-hover:text-on-primary transition-all"
+                                data-path="company-profile" href="#">
+                                <span>ကုမ္ပဏီအချက်အလက် ကြည့်ရန်</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Empty State (Hidden by Default, triggered when search produces 0 items) -->
+                <div class="hidden flex-col items-center justify-center text-center p-12 bg-surface-container-lowest rounded-2xl mt-6 shadow-sm"
+                    id="noResultsState">
+                    <div
+                        class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant mb-4">
+                        <span class="material-symbols-outlined text-[32px]">search_off</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md font-bold text-primary mb-2">ကိုက်ညီသော ကုမ္ပဏီမရှိပါ
+                        (No Matching Companies Found)</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-6">
+                        ရှာဖွေမှုစကားလုံး သို့မဟုတ် သတ်မှတ်ထားသော filter များကို ပြင်ဆင်ပြီး ထပ်မံရှာဖွေကြည့်ပါ။
+                    </p>
+                    <button
+                        class="px-6 py-2.5 rounded-lg bg-primary-container text-on-primary font-body-md text-body-md font-medium shadow"
+                        onclick="resetFilters()" type="button">
+                        Reset Search Parameters
+                    </button>
+                </div>
+            </section>
+            <!-- Visual Data & Institutional Verification Standards Bento -->
+            <section class="w-full bg-surface-container-low py-16">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div class="flex flex-col gap-3 mb-10">
+                        <span
+                            class="font-label-md text-label-md uppercase tracking-wider text-secondary flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                            Institutional Protocols
+                        </span>
+                        <h2 class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">
+                            စိစစ်အတည်ပြုခြင်း စံနှုန်းများနှင့် လုပ်ငန်းစဉ်များ (Verification Standards)
+                        </h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                            GUARDIAN PBVS operates under statutory audit mandates, synthesizing real-time judicial
+                            filings, Directorate of Investment and Company Administration (DICA) updates, and
+                            cross-border commercial claims.
+                        </p>
+                    </div>
+                    <!-- Bento Grid 3-Columns -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Panel 1: Data Pipeline Integrity Chart -->
+                        <div
+                            class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Live
+                                        Sync Precision</span>
+                                    <span class="font-code text-code font-bold text-secondary">99.4% Validated</span>
+                                </div>
+                                <h3 class="font-title-lg text-title-lg font-bold text-primary">Direct DICA &amp; Court
+                                    Integration</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Automated ledger comparisons eliminate latency between ministerial company status
+                                    updates and commercial partner accessibility.
+                                </p>
+                            </div>
+                            <!-- Inline Data Visualization SVG Sparkline/Bar -->
+                            <div class="my-6 p-4 rounded-xl bg-surface-container-low">
+                                <div class="flex items-end justify-between gap-2 h-20">
+                                    <div class="w-full flex flex-col items-center gap-1.5">
+                                        <div class="w-full bg-primary-container/20 rounded-t h-8"></div>
+                                        <span class="font-code text-[10px] text-on-surface-variant">Oct</span>
+                                    </div>
+                                    <div class="w-full flex flex-col items-center gap-1.5">
+                                        <div class="w-full bg-primary-container/30 rounded-t h-12"></div>
+                                        <span class="font-code text-[10px] text-on-surface-variant">Nov</span>
+                                    </div>
+                                    <div class="w-full flex flex-col items-center gap-1.5">
+                                        <div class="w-full bg-primary-container/50 rounded-t h-14"></div>
+                                        <span class="font-code text-[10px] text-on-surface-variant">Dec</span>
+                                    </div>
+                                    <div class="w-full flex flex-col items-center gap-1.5">
+                                        <div class="w-full bg-primary-container/70 rounded-t h-16"></div>
+                                        <span class="font-code text-[10px] text-on-surface-variant">Jan</span>
+                                    </div>
+                                    <div class="w-full flex flex-col items-center gap-1.5">
+                                        <div class="w-full bg-secondary rounded-t h-20"></div>
+                                        <span class="font-code text-[10px] font-bold text-secondary">Current</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center justify-between text-on-surface-variant font-code text-[11px]">
+                                <span>Last Ledger Update: 14m ago</span>
+                                <span class="text-secondary font-bold">1,480 Audited Profiles</span>
+                            </div>
+                        </div>
+                        <!-- Panel 2: Multi-Factor Due Diligence Tiering -->
+                        <div
+                            class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Classification</span>
+                                    <span
+                                        class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+                                </div>
+                                <h3 class="font-title-lg text-title-lg font-bold text-primary">Quad-Tier Severity
+                                    Standard</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    Standardized classification methodology protecting enterprise supply chains from
+                                    covert defaults and corporate malfeasance.
+                                </p>
+                            </div>
+                            <!-- Color Key Matrix -->
+                            <div class="my-6 flex flex-col gap-2.5">
+                                <div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+                                        <span class="font-label-md text-label-md text-primary font-bold">Verified
+                                            Whitelist (AAA)</span>
+                                    </div>
+                                    <span class="font-code text-code text-on-surface-variant">612 Entities</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="w-3 h-3 rounded-full bg-secondary"></span>
+                                        <span class="font-label-md text-label-md text-primary font-bold">Active
+                                            Monitoring (Yellow)</span>
+                                    </div>
+                                    <span class="font-code text-code text-on-surface-variant">420 Entities</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="w-3 h-3 rounded-full bg-error"></span>
+                                        <span class="font-label-md text-label-md text-primary font-bold">High Risk /
+                                            Disputed (Red)</span>
+                                    </div>
+                                    <span class="font-code text-code text-on-surface-variant">284 Entities</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="w-3 h-3 rounded-full bg-inverse-surface"></span>
+                                        <span class="font-label-md text-label-md text-primary font-bold">Critical
+                                            Judicial Freeze (Black)</span>
+                                    </div>
+                                    <span class="font-code text-code text-on-surface-variant">164 Entities</span>
+                                </div>
+                            </div>
+                            <div class="text-on-surface-variant font-body-md text-[12px]">
+                                Statutory criteria governed by the Commercial Arbitration Board.
+                            </div>
+                        </div>
+                        <!-- Panel 3: Request Enterprise Investigation Action Block -->
+                        <div
+                            class="bg-primary-container rounded-2xl p-6 shadow-md text-on-primary flex flex-col justify-between relative overflow-hidden">
+                            <!-- Subtle graphic background watermark -->
+                            <div class="absolute -right-8 -bottom-8 opacity-10 pointer-events-none text-on-primary">
+                                <span class="material-symbols-outlined text-[160px]">shield</span>
+                            </div>
+                            <div class="flex flex-col gap-3 relative z-10">
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-surface-container-lowest/10 text-secondary-fixed font-label-md text-label-md font-bold uppercase tracking-wider">
+                                        Enterprise Due Diligence
+                                    </span>
+                                </div>
+                                <h3 class="font-title-lg text-title-lg font-bold text-on-primary">
+                                    ကုမ္ပဏီတစ်ခုအား စုံစမ်းစစ်ဆေးမှု ပြုလုပ်ရန် လျှောက်ထားလိုပါသလား?
+                                </h3>
+                                <p class="font-body-md text-body-md text-on-primary-container">
+                                    Commission an unredacted investigative audit for non-listed private partnerships,
+                                    joint ventures, or foreign trade counterparts.
+                                </p>
+                            </div>
+                            <div class="pt-6 relative z-10 flex flex-col gap-3">
+                                <a class="w-full py-3.5 px-4 rounded-xl bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim font-body-md text-body-md font-bold text-center transition-all shadow-md active:scale-98"
+                                    data-path="background-verification" href="#">
+                                    စုံစမ်းစစ်ဆေးမှု စတင်ရန် (Initiate Inquiry)
+                                </a>
+                                <p class="font-code text-[11px] text-center text-on-primary-container">
+                                    Turnaround: 48-72 Business Hours with Certified Legal Signoff
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Interactive JavaScript Filter & Search Engine -->
+            <script>
+                function applyCompanyFilters() {
+                    const searchInput = document.getElementById('companySearchInput').value.toLowerCase().trim();
+                    const industryValue = document.getElementById('industrySelect').value;
+                    const locationValue = document.getElementById('locationSelect').value;
+                    const riskValue = document.getElementById('riskSelect').value;
+
+                    const cards = document.querySelectorAll('.company-card');
+                    let visibleCount = 0;
+
+                    cards.forEach(card => {
+                        const companyName = card.getAttribute('data-company') || '';
+                        const cardIndustry = card.getAttribute('data-industry') || '';
+                        const cardLocation = card.getAttribute('data-location') || '';
+                        const cardRisk = card.getAttribute('data-risk') || '';
+
+                        const matchesSearch = !searchInput || companyName.includes(searchInput);
+                        const matchesIndustry = (industryValue === 'all') || (cardIndustry === industryValue);
+                        const matchesLocation = (locationValue === 'all') || (cardLocation === locationValue);
+                        const matchesRisk = (riskValue === 'all') || (cardRisk === riskValue);
+
+                        if (matchesSearch && matchesIndustry && matchesLocation && matchesRisk) {
+                            card.classList.remove('hidden');
+                            visibleCount++;
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+
+                    const badge = document.getElementById('resultsCountBadge');
+                    if (badge) {
+                        badge.textContent = visibleCount + ' Records';
+                    }
+
+                    const noResults = document.getElementById('noResultsState');
+                    if (noResults) {
+                        if (visibleCount === 0) {
+                            noResults.classList.remove('hidden');
+                            noResults.classList.add('flex');
+                        } else {
+                            noResults.classList.add('hidden');
+                            noResults.classList.remove('flex');
+                        }
+                    }
+                }
+
+                function resetFilters() {
+                    document.getElementById('companySearchInput').value = '';
+                    document.getElementById('industrySelect').value = 'all';
+                    document.getElementById('locationSelect').value = 'all';
+                    document.getElementById('riskSelect').value = 'all';
+                    applyCompanyFilters();
+                }
+
+                // Keyboard shortcut helper for Cmd+K / Ctrl+K
+                window.addEventListener('keydown', function (e) {
+                    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                        e.preventDefault();
+                        const input = document.getElementById('companySearchInput');
+                        if (input) {
+                            input.focus();
+                            input.select();
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </main>
+    <aside class="fixed bottom-6 left-6 z-40"><a
+            class="flex items-center gap-2 px-4 py-3 rounded-full bg-error text-on-error shadow-[0_4px_16px_rgba(0,0,0,0.18)] hover:brightness-110 active:scale-95 transition-all"
+            data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">gavel</span><span
+                class="font-label-md text-label-md font-bold tracking-normal">တိုင်ကြားရန် (Report)</span></a></aside>
+    <footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="lg:col-span-2 flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+                            <span class="material-symbols-outlined text-[20px]">verified_user</span></div>
+                        <div class="flex flex-col"><span
+                                class="font-title-lg text-title-lg font-bold text-on-surface">GUARDIAN
+                                (PBVS)</span><span class="font-label-md text-label-md text-on-surface-variant">Business
+                                Integrity &amp; Risk Information Platform</span></div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Providing institutional-grade
+                        compliance checks, verified enterprise records, and public-interest fraud deterrence for
+                        Myanmar's emerging commercial ecosystem.</p>
+                    <div class="flex items-center gap-2 mt-2"><a aria-label="Facebook"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a
+                            aria-label="LinkedIn"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a
+                            aria-label="TikTok"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">play_circle</span></a><a
+                            aria-label="Telegram"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">send</span></a></div>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Platform
+                        Links</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="home" href="#">Home</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="black-list" href="#">Black List</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="companies" href="#">Companies</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="background-verification" href="#">Background Verification</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="warning-news" href="#">Warning &amp; News</a></nav>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Organization</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="about-us" href="#">About Us</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="contact" href="#">Contact</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="person-profile" href="#">Person Directory</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="company-profile" href="#">Company Registry</a></nav>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Legal
+                        &amp; Trust</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Privacy Policy</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Terms of Use</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Data Protection</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="contact" href="#">Appeal / Report</a></nav>
+                </div>
+            </div>
+            <div
+                class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-md text-body-md text-on-surface-variant">
+                <p>© 2026 GUARDIAN (PBVS). All Rights Reserved.</p>
+                <div class="flex items-center gap-6"><span class="inline-flex items-center gap-1.5"><span
+                            class="w-2 h-2 rounded-full bg-secondary-container"></span>Security
+                        Verified</span><span>Institutional Data Integrity Standard v3.4</span></div>
+            </div>
+        </div>
+    </footer>
+<section class="stitch-functional-panel"><div class="card"><h2>Live Company Registry</h2><div class="responsive-table"><table><tr><th>Company</th><th>Registration</th><th>Industry</th><th>Verification</th></tr>{% for company in companies %}<tr><td>{{ company.name }}</td><td>{{ company.registration_number }}</td><td>{{ company.industry|default:'—' }}</td><td>{{ company.get_verification_status_display }}</td></tr>{% empty %}<tr><td colspan="4">No companies registered.</td></tr>{% endfor %}</table></div></div></section><script src="/static/js/guardian.js"></script></body>
+
+</html>

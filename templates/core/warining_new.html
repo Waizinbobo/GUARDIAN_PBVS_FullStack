@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GUARDIAN (PBVS)</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { "darkMode": "class", "theme": { "extend": { "colors": { "error": "#ba1a1a", "primary-container": "#131b2e", "surface": "#f7f9fb", "on-secondary": "#ffffff", "on-error": "#ffffff", "primary-fixed": "#dae2fd", "on-background": "#191c1e", "surface-container-low": "#f2f4f6", "surface-bright": "#f7f9fb", "on-error-container": "#93000a", "tertiary-fixed-dim": "#b7c8e1", "secondary-fixed-dim": "#e9c349", "surface-container": "#eceef0", "on-secondary-fixed": "#241a00", "surface-dim": "#d8dadc", "secondary-fixed": "#ffe088", "background": "#f7f9fb", "tertiary-container": "#0b1c30", "inverse-surface": "#2d3133", "on-tertiary-container": "#75859d", "error-container": "#ffdad6", "surface-variant": "#e0e3e5", "on-tertiary-fixed": "#0b1c30", "surface-tint": "#565e74", "tertiary": "#000000", "surface-container-high": "#e6e8ea", "primary": "#000000", "outline": "#76777d", "on-secondary-fixed-variant": "#574500", "on-primary-container": "#7c839b", "on-primary-fixed": "#131b2e", "on-primary-fixed-variant": "#3f465c", "on-surface": "#191c1e", "inverse-on-surface": "#eff1f3", "inverse-primary": "#bec6e0", "secondary-container": "#fed65b", "tertiary-fixed": "#d3e4fe", "surface-container-lowest": "#ffffff", "secondary": "#735c00", "on-tertiary-fixed-variant": "#38485d", "outline-variant": "#c6c6cd", "on-surface-variant": "#45464d", "on-secondary-container": "#745c00", "on-primary": "#ffffff", "surface-container-highest": "#e0e3e5", "on-tertiary": "#ffffff", "primary-fixed-dim": "#bec6e0" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "16px", "container-max": "1440px", "margin-desktop": "32px", "base": "8px", "gutter": "24px" }, "fontFamily": { "label-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "title-lg": ["Inter"], "headline-lg": ["Inter"], "code": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface min-h-screen relative">
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div
+            class="h-20 max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4">
+            <a class="flex items-center gap-3 shrink-0 text-left" data-path="home" href="#">
+                <div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+                    <span class="material-symbols-outlined text-[24px]">verified_user</span></div>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-1.5"><span
+                            class="font-title-lg text-title-lg tracking-tight text-on-surface font-bold">GUARDIAN</span><span
+                            class="font-label-md text-label-md px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">PBVS</span>
+                    </div><span
+                        class="hidden lg:block font-label-md text-[11px] text-on-surface-variant font-medium tracking-normal">Business
+                        Integrity &amp; Risk Information Platform</span>
+                </div>
+            </a>
+            <nav class="hidden xl:flex items-center gap-1"
+                data-active-classes="bg-surface-container text-on-surface font-semibold rounded-lg"><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="home" href="#">Home</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="black-list" href="#">Black List</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="companies" href="#">Companies</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="background-verification" href="#">Background Verification</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="warning-news" href="#">Warning &amp; News</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="about-us" href="#">About Us</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="contact" href="#">Contact</a></nav>
+            <div class="flex items-center gap-3 shrink-0"><a
+                    class="flex items-center gap-2.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary transition-all font-body-md text-body-md font-medium"
+                    data-path="login" href="#"><span class="hidden sm:inline">User Account</span>
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+                </a><button
+                    class="xl:hidden p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+                    type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-screen">
+        <div class="flex flex-col w-full">
+            <section class="w-full bg-surface-container-lowest shadow-sm">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16">
+                    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                        <div class="flex flex-col gap-3 max-w-3xl">
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-error"></span>
+                                <span
+                                    class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Official
+                                    Gazette &amp; Integrity Bulletin</span>
+                                <span class="text-outline-variant font-label-md text-label-md">/</span>
+                                <span class="font-code text-code text-on-surface-variant">BULLETIN-REF-2026.02</span>
+                            </div>
+                            <h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+                                သတိပေးချက်နှင့် သတင်းများ
+                                <span
+                                    class="block font-title-lg text-title-lg text-on-surface-variant font-normal mt-1">Warning
+                                    &amp; Public Notices Archive</span>
+                            </h1>
+                            <p class="font-body-lg text-body-lg text-primary-container font-medium">
+                                Warning Active Update News Daily.
+                            </p>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                အရေးကြီးသော သတိပေးချက်များနှင့် အချက်အလက်များကို နေ့စဉ် အပ်ဒိတ်ပြုလုပ်ပေးပါသည်။
+                                Institutional advisories, regulatory sanctions, and verified corporate compliance
+                                notices published for immediate public interest.
+                            </p>
+                        </div>
+                        <div
+                            class="flex flex-col sm:flex-row lg:flex-col items-start lg:items-end gap-3 bg-surface-container-low p-4 rounded-xl shrink-0">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-secondary text-[20px]">shield</span>
+                                <span class="font-label-md text-label-md text-on-surface font-semibold uppercase">Digest
+                                    Frequency</span>
+                            </div>
+                            <div class="flex items-center gap-4 text-on-surface-variant font-code text-code">
+                                <span>Daily: 08:30 MMT</span>
+                                <span class="w-1 h-1 rounded-full bg-outline"></span>
+                                <span>Archive Integrity: Verified</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 pt-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex items-center gap-1.5 overflow-x-auto pb-2 md:pb-0 scrollbar-none"
+                            id="filter-container">
+                            <button
+                                class="filter-btn px-4 py-2 rounded-lg font-label-md text-label-md transition-colors bg-primary-container text-on-primary"
+                                data-filter="all" type="button">
+                                All Notices (6)
+                            </button>
+                            <button
+                                class="filter-btn px-4 py-2 rounded-lg font-label-md text-label-md transition-colors bg-surface-container text-on-surface-variant hover:text-on-surface"
+                                data-filter="warning" type="button">
+                                Warning (အရေးကြီး သတိပေးချက်)
+                            </button>
+                            <button
+                                class="filter-btn px-4 py-2 rounded-lg font-label-md text-label-md transition-colors bg-surface-container text-on-surface-variant hover:text-on-surface"
+                                data-filter="public-notice" type="button">
+                                Public Notice (အများပြည်သူ ကြေညာချက်)
+                            </button>
+                            <button
+                                class="filter-btn px-4 py-2 rounded-lg font-label-md text-label-md transition-colors bg-surface-container text-on-surface-variant hover:text-on-surface"
+                                data-filter="verification-update" type="button">
+                                Verification Update (စိစစ်အတည်ပြုမှု အပ်ဒိတ်)
+                            </button>
+                            <button
+                                class="filter-btn px-4 py-2 rounded-lg font-label-md text-label-md transition-colors bg-surface-container text-on-surface-variant hover:text-on-surface"
+                                data-filter="news" type="button">
+                                News (အထွေထွေ သတင်း)
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-2 shrink-0">
+                            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">schedule</span>
+                            <span class="font-code text-code text-on-surface-variant">Live Feed Synced: 12 Feb
+                                2026</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-10 md:py-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="news-grid">
+                    <!-- Card 1: Warning -->
+                    <article
+                        class="news-card flex flex-col justify-between h-[520px] bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-6 relative overflow-hidden group"
+                        data-category="warning">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center justify-between gap-2">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-error-container text-on-error-container font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[14px]">error</span>
+                                    WARNING
+                                </span>
+                                <span class="font-code text-code text-on-surface-variant">SEC-WN-2026/089</span>
+                            </div>
+                            <div class="h-32 w-full rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    data-alt="Official industrial maritime cargo vessel docked at port with security personnel conducting verification checks under dramatic overcast sky, clean corporate documentary style with navy and slate grey tones."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkUfKHUW73nMeDPTrs5265o-YlGMBoCsd_RdCiZQsu8GR6UkHsi0LFn8JTqMbFZCcntwrfAwp-hwBS4wHjKILQJ8QW_TY3iI7LzLu8LPMwJotgiS4PXFdMw-Fa7rGOAMnDPHOLpXDC4uIW4Usj61hdIGkY7jU4f5YG-vNXoi5CYkhCEv-sW3fWaPR6rbT_srkQ-cxrAOFnabdVJ3qhOJmnHOFkNUyytKH8V45x2gSqGAlIchB2iTmeTQ" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent">
+                                </div>
+                                <span class="absolute bottom-2 left-3 font-code text-[11px] text-on-primary">Maritime
+                                    Logistics / Cross-border Transit</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h2
+                                    class="font-title-lg text-title-lg text-on-surface font-bold leading-tight group-hover:text-primary-container transition-colors line-clamp-2">
+                                    လိုင်စင်မဲ့ ကုန်စည်ပို့ဆောင်ရေး လုပ်ငန်းကွန်ရက် သတိပေးချက်
+                                </h2>
+                                <p class="font-label-md text-[13px] text-secondary font-semibold">
+                                    Illicit Unregistered Freight Logistics Network Advisory
+                                </p>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                                    ပြည်တွင်း/နယ်စပ် ရေကြောင်းနှင့် ကုန်းလမ်း သယ်ယူပို့ဆောင်ရေးကဏ္ဍတွင် ခွင့်ပြုမိန့်မဲ့
+                                    လုပ်ကိုင်နေသော ကုန်စည်ပို့ဆောင်ရေး ကွန်ရက်များနှင့် စာရွက်စာတမ်း အတုအပ
+                                    အသုံးပြုမှုများအပေါ် သတိပေးချက် ထုတ်ပြန်ခြင်း။ အဆိုပါ အဖွဲ့အစည်းများနှင့်
+                                    ပတ်သက်မိသော စီးပွားရေးလုပ်ငန်းများ ပူးတွဲတာဝန်ရှိမှု သတိပြုရန်။
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-4 mt-auto flex items-center justify-between gap-3 bg-surface-container-low -mx-6 -mb-6 px-6 py-4 rounded-b-xl">
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span>
+                                <time class="font-code text-code text-on-surface" datetime="2026-02-12">12 Feb
+                                    2026</time>
+                            </div>
+                            <a class="inline-flex items-center gap-1 font-label-md text-label-md font-bold text-primary-container hover:text-on-surface transition-colors"
+                                data-path="news-detail" href="#">
+                                <span>အသေးစိတ်ဖတ်ရှုရန်</span>
+                                <span
+                                    class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Card 2: Public Notice -->
+                    <article
+                        class="news-card flex flex-col justify-between h-[520px] bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-6 relative overflow-hidden group"
+                        data-category="public-notice">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center justify-between gap-2">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-secondary-container/30 text-on-secondary-fixed-variant font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[14px]">campaign</span>
+                                    PUBLIC NOTICE
+                                </span>
+                                <span class="font-code text-code text-on-surface-variant">SEC-PN-2026/041</span>
+                            </div>
+                            <div class="h-32 w-full rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    data-alt="High precision macro shot of official legal seal stamps and embossed security certificates resting on a polished dark mahogany desk, clean institutional lighting, professional governance aesthetic."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3AUhHNUYNvEW0M37nRNvnPSc6EJ4SZEX3ZZo82qv1hyTXQlbfivJ9VuhRXddipdZLe0UqKcCoRkvAjo7VAOcMBBFF63gz0mTDk66JIXBumR4ASmbmlVwAkeraKwXzSOaarf613XiylgObmDS3l2aGAUiXbNxjxQQnmOgeIbYAPOh6deUBdGqNhqoPKn_ErBjv_L9tX6pXfZTfOzJw4jp2gDzkxXVR6ICe0d-KbhBxOzsDJ4VwWm_vaA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent">
+                                </div>
+                                <span class="absolute bottom-2 left-3 font-code text-[11px] text-on-primary">Regulatory
+                                    Stamp &amp; Certificate Security</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h2
+                                    class="font-title-lg text-title-lg text-on-surface font-bold leading-tight group-hover:text-primary-container transition-colors line-clamp-2">
+                                    အတုအပ အသိအမှတ်ပြု တံဆိပ်ခေါင်းနှင့် လက်မှတ်များ သတိပြုရန်
+                                </h2>
+                                <p class="font-label-md text-[13px] text-secondary font-semibold">
+                                    Notice on Forged Institutional Verification Stamps &amp; Seals
+                                </p>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                                    PBVS စနစ်အမည်နှင့် တံဆိပ်တုံးတုများ အသုံးပြု၍ ကုန်သွယ်ရေးနှင့် ဘဏ်ချေးငွေ
+                                    လျှောက်ထားမှုများတွင် မမှန်မကန် တင်ပြနေမှုများကို စစ်ဆေးတွေ့ရှိရသဖြင့် တရားဝင် QR
+                                    ကုဒ်နှင့် ဒစ်ဂျစ်တယ် Cryptographic Hash ပါရှိမှု မရှိသော စာရွက်စာတမ်းများကို
+                                    ပယ်ဖျက်ရန် အကြောင်းကြားအပ်ပါသည်။
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-4 mt-auto flex items-center justify-between gap-3 bg-surface-container-low -mx-6 -mb-6 px-6 py-4 rounded-b-xl">
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span>
+                                <time class="font-code text-code text-on-surface" datetime="2026-02-08">08 Feb
+                                    2026</time>
+                            </div>
+                            <a class="inline-flex items-center gap-1 font-label-md text-label-md font-bold text-primary-container hover:text-on-surface transition-colors"
+                                data-path="news-detail" href="#">
+                                <span>အသေးစိတ်ဖတ်ရှုရန်</span>
+                                <span
+                                    class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Card 3: Verification Update -->
+                    <article
+                        class="news-card flex flex-col justify-between h-[520px] bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-6 relative overflow-hidden group"
+                        data-category="verification-update">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center justify-between gap-2">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary-container text-on-primary font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[14px]">verified</span>
+                                    VERIFICATION UPDATE
+                                </span>
+                                <span class="font-code text-code text-on-surface-variant">PBVS-REP-2026-01</span>
+                            </div>
+                            <div
+                                class="h-32 w-full rounded-lg overflow-hidden relative bg-surface-container flex items-center justify-center p-4">
+                                <div class="w-full flex items-center justify-between gap-3">
+                                    <div class="flex flex-col">
+                                        <span class="font-label-md text-label-md text-on-surface-variant">Verified
+                                            Records</span>
+                                        <span
+                                            class="font-headline-md text-headline-md font-bold text-primary-container">14,280</span>
+                                        <span class="font-code text-[11px] text-on-surface-variant">+12.4% MoM Integrity
+                                            Flow</span>
+                                    </div>
+                                    <svg class="w-24 h-16 text-primary-container" fill="none" stroke="currentColor"
+                                        viewbox="0 0 100 50">
+                                        <path d="M0 45 L20 38 L40 40 L60 22 L80 18 L100 8" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="3"></path>
+                                        <path d="M0 45 L20 38 L40 40 L60 22 L80 18 L100 8 L100 50 L0 50 Z"
+                                            fill="currentColor" opacity="0.08"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h2
+                                    class="font-title-lg text-title-lg text-on-surface font-bold leading-tight group-hover:text-primary-container transition-colors line-clamp-2">
+                                    ၂၀၂၆ ခုနှစ် ဇန်နဝါရီလ စစ်ဆေးအတည်ပြုပြီး အချက်အလက် အစီရင်ခံစာ
+                                </h2>
+                                <p class="font-label-md text-[13px] text-primary-container font-semibold">
+                                    January 2026 Verification Audit Digest
+                                </p>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                                    ပြီးခဲ့သည့်လအတွင်း ပြည်တွင်းကုမ္ပဏီနှင့် ဒါရိုက်တာအချက်အလက် စိစစ်ချက်များအနက် အတုအပ
+                                    အထောက်အထား ၂၃၈ ခုအား ပယ်ဖျက်နိုင်ခဲ့ပြီး စစ်ဆေးမှုပေါင်း ၁၄,၀၀၀ ကျော်ကို
+                                    အတည်ပြုမှတ်တမ်းတင်ခဲ့သည့် လစဉ် ပြည့်စုံသော အစီရင်ခံစာ ထုတ်ပြန်ချက် ဖြစ်ပါသည်။
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-4 mt-auto flex items-center justify-between gap-3 bg-surface-container-low -mx-6 -mb-6 px-6 py-4 rounded-b-xl">
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span>
+                                <time class="font-code text-code text-on-surface" datetime="2026-02-01">01 Feb
+                                    2026</time>
+                            </div>
+                            <a class="inline-flex items-center gap-1 font-label-md text-label-md font-bold text-primary-container hover:text-on-surface transition-colors"
+                                data-path="news-detail" href="#">
+                                <span>အသေးစိတ်ဖတ်ရှုရန်</span>
+                                <span
+                                    class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Card 4: News -->
+                    <article
+                        class="news-card flex flex-col justify-between h-[520px] bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-6 relative overflow-hidden group"
+                        data-category="news">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-outline"></div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center justify-between gap-2">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[14px]">feed</span>
+                                    NEWS
+                                </span>
+                                <span class="font-code text-code text-on-surface-variant">TECH-REL-v4.2</span>
+                            </div>
+                            <div class="h-32 w-full rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    data-alt="Modern server room terminal interface displaying encrypted compliance data stream and API endpoints, deep navy blue ambient lights, minimalist high-tech cybersecurity setup."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8E8qdl6S2sacQEhhNvdtBj8fljteY-njmWXHHBh3GuyYK9h3aTYA7FVIdjWQacUA370y2VzVSku-WH_D7fxnh21dJDWYNACoZLAZbcm1fq0Qwy1jlYkNNn62iYinW7sYLWzffj--qqRxQrfov8CPiz4WYGdKs_WkxYKmLk0metirDbOgEkh_1bIpX9UvgQs278MXXCYQXpkSkOjIspPXmd0LEbPlvBLebqyvD4M9N-rEcDjYY_2LLcw" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent">
+                                </div>
+                                <span class="absolute bottom-2 left-3 font-code text-[11px] text-on-primary">Enterprise
+                                    Developer Architecture</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h2
+                                    class="font-title-lg text-title-lg text-on-surface font-bold leading-tight group-hover:text-primary-container transition-colors line-clamp-2">
+                                    B2B API Integration Protocol ဗားရှင်း ၄.၂ စတင်မိတ်ဆက်ခြင်း
+                                </h2>
+                                <p class="font-label-md text-[13px] text-on-surface-variant font-semibold">
+                                    B2B API Integration v4.2 Release
+                                </p>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                                    ဘဏ်များနှင့် ဘဏ္ဍာရေးအဖွဲ့အစည်းများအတွက် အချိန်နှင့်တပြေးညီ Blacklist &amp;
+                                    High-Risk တိုက်ဆိုင်စစ်ဆေးနိုင်သည့် REST API Gateway ဗားရှင်း ၄.၂ အား တရားဝင် စတင်
+                                    ဖြန့်ချိလိုက်ပါသည်။ Latency နိမ့်ကျစေရန် မြန်မာ-စင်ကာပူ Edge node အသစ်များ
+                                    ထည့်သွင်းထားပါသည်။
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-4 mt-auto flex items-center justify-between gap-3 bg-surface-container-low -mx-6 -mb-6 px-6 py-4 rounded-b-xl">
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span>
+                                <time class="font-code text-code text-on-surface" datetime="2026-01-28">28 Jan
+                                    2026</time>
+                            </div>
+                            <a class="inline-flex items-center gap-1 font-label-md text-label-md font-bold text-primary-container hover:text-on-surface transition-colors"
+                                data-path="news-detail" href="#">
+                                <span>အသေးစိတ်ဖတ်ရှုရန်</span>
+                                <span
+                                    class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Card 5: Warning -->
+                    <article
+                        class="news-card flex flex-col justify-between h-[520px] bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-6 relative overflow-hidden group"
+                        data-category="warning">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center justify-between gap-2">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-error-container text-on-error-container font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[14px]">warning</span>
+                                    WARNING
+                                </span>
+                                <span class="font-code text-code text-on-surface-variant">CYBER-SEC-2026/012</span>
+                            </div>
+                            <div class="h-32 w-full rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    data-alt="Cinematic high contrast close-up of encrypted computer monitors in a corporate forensic intelligence unit, displaying compromised network alerts and telemetry in stark navy and red tones."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrG7sR6Bc6P-KgeUm8FYnYhGcUX6tCqL2j7vOBjVSEcgIxBWBAIwrFU0Mw9ZxnZ9zUgSIfWPNpcHRowrPXdY8sufmlveF2NPJpIXGBY6Xx0CgMVpPWtdkigkqPlKhZM7v0rE6vTql9WBLLIIMj46Leid6Y6Ukc_AMD1qc6lOfs8cqm3w0vCwASV6OGsGz0bNgG5LmtpwR_My4dn-L1GbTUfFp84f_DNuXfJJO2trSbg-5zZu4wr_ObSA" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent">
+                                </div>
+                                <span class="absolute bottom-2 left-3 font-code text-[11px] text-on-primary">Critical
+                                    Enterprise Cyber Advisory</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h2
+                                    class="font-title-lg text-title-lg text-on-surface font-bold leading-tight group-hover:text-primary-container transition-colors line-clamp-2">
+                                    Software Source Code နှင့် အချက်အလက် ခိုးယူပေါက်ကြားမှု သတိပေးချက်
+                                </h2>
+                                <p class="font-label-md text-[13px] text-secondary font-semibold">
+                                    Critical Alert on Enterprise Code Theft &amp; Exfiltration
+                                </p>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                                    ပြည်တွင်း နည်းပညာနှင့် ငွေကြေးဝန်ဆောင်မှု ကုမ္ပဏီအချို့ထံမှ မူပိုင် Source Code
+                                    နှင့် ဝန်ထမ်းအချက်အလက်များကို အလွဲသုံးစားရယူကာ ပြင်ပသို့ ရောင်းချရန် ကြိုးပမ်းသည့်
+                                    ဖြစ်စဉ်များအား ထောက်လှမ်းတွေ့ရှိထားသဖြင့် လုံခြုံရေး အဆင့်တိုးမြှင့်ရန် အရေးပေါ်
+                                    အကြံပြုအပ်ပါသည်။
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-4 mt-auto flex items-center justify-between gap-3 bg-surface-container-low -mx-6 -mb-6 px-6 py-4 rounded-b-xl">
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span>
+                                <time class="font-code text-code text-on-surface" datetime="2026-01-22">22 Jan
+                                    2026</time>
+                            </div>
+                            <a class="inline-flex items-center gap-1 font-label-md text-label-md font-bold text-primary-container hover:text-on-surface transition-colors"
+                                data-path="news-detail" href="#">
+                                <span>အသေးစိတ်ဖတ်ရှုရန်</span>
+                                <span
+                                    class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Card 6: Public Notice -->
+                    <article
+                        class="news-card flex flex-col justify-between h-[520px] bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all p-6 relative overflow-hidden group"
+                        data-category="public-notice">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center justify-between gap-2">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-secondary-container/30 text-on-secondary-fixed-variant font-label-md text-label-md font-bold">
+                                    <span class="material-symbols-outlined text-[14px]">policy</span>
+                                    PUBLIC NOTICE
+                                </span>
+                                <span class="font-code text-code text-on-surface-variant">LEGAL-ARB-2026/003</span>
+                            </div>
+                            <div class="h-32 w-full rounded-lg overflow-hidden relative">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    data-alt="Official corporate mediation boardroom with formal documents, leather bound legal reference books, and fountain pens set neatly on the conference table, calm and trustworthy institutional mood."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBym5AiPt5y4MdS9xHwhh-KrKp3F8CabtXrMzAlWjQliMNv6CbYVrPuiUs1yykNYQxPVN9ai7U6b_368sEB8b_rEUuzNPllitYcc8AyG923CQ687WoFUP6cRkf4fMPmSt01SgMlp-g6EpoHgJVk_DLpPKeDD2cd6iDy3fL3Gtu3GYVJ9MT1n1uPivnGebZ5e3byAzVNFpTJrjuDYR8zTnzrDgBNGr2ebEKIyv6YBuxPAv9ssfxDh1jJ9w" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent">
+                                </div>
+                                <span class="absolute bottom-2 left-3 font-code text-[11px] text-on-primary">Mediation
+                                    &amp; Due Process Standard</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h2
+                                    class="font-title-lg text-title-lg text-on-surface font-bold leading-tight group-hover:text-primary-container transition-colors line-clamp-2">
+                                    လုပ်ငန်းခွင် အငြင်းပွားမှု ဖြေရှင်းရေးနှင့် အယူခံတင်သွင်းခြင်း လမ်းညွှန်ချက်
+                                </h2>
+                                <p class="font-label-md text-[13px] text-secondary font-semibold">
+                                    Workplace Arbitration Appeal Guidelines 2026
+                                </p>
+                                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                                    PBVS စနစ်အတွင်း အကျုံးဝင်သော စီးပွားရေးလုပ်ငန်းများနှင့် ဝန်ထမ်းများအကြား
+                                    ပဋိပက္ခဖြစ်ပွားမှုများအတွက် သမာသမတ်ကျစွာ စုံစမ်းစစ်ဆေးမည့် အယူခံတင်သွင်းမှု
+                                    လုပ်ထုံးလုပ်နည်း အသစ်ကို အတည်ပြုပြဋ္ဌာန်းလိုက်ပါသည်။ အယူခံလျှောက်ထားခြင်းကို ရက် ၃၀
+                                    အတွင်း ဆောင်ရွက်နိုင်သည်။
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-4 mt-auto flex items-center justify-between gap-3 bg-surface-container-low -mx-6 -mb-6 px-6 py-4 rounded-b-xl">
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span>
+                                <time class="font-code text-code text-on-surface" datetime="2026-01-15">15 Jan
+                                    2026</time>
+                            </div>
+                            <a class="inline-flex items-center gap-1 font-label-md text-label-md font-bold text-primary-container hover:text-on-surface transition-colors"
+                                data-path="news-detail" href="#">
+                                <span>အသေးစိတ်ဖတ်ရှုရန်</span>
+                                <span
+                                    class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Official Notice Verification Scrim Banner -->
+                <div
+                    class="mt-12 bg-primary-container text-on-primary p-8 rounded-xl relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div class="flex items-start gap-4 max-w-2xl">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center shrink-0">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-[28px]">verified_user</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="font-title-lg text-title-lg font-bold">Public Notice Verification Guarantee</h3>
+                            <p class="font-body-md text-body-md text-on-primary-container">
+                                All bulletins and fraud alerts released by GUARDIAN (PBVS) are cryptographically
+                                validated against sovereign corporate indices. Need to report an urgent unauthorized
+                                operation?
+                            </p>
+                        </div>
+                    </div>
+                    <a class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold hover:brightness-105 active:scale-98 transition-all shrink-0"
+                        data-path="contact" href="#">
+                        <span class="material-symbols-outlined text-[18px]">gavel</span>
+                        <span>Submit Official Dispatch</span>
+                    </a>
+                </div>
+                <!-- Pagination / Protocol Index -->
+                <div
+                    class="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-transparent text-on-surface-variant font-code text-code">
+                    <div>Showing 1 - 6 of 6 Official Bulletins (Page 1 of 1)</div>
+                    <div class="flex items-center gap-2">
+                        <button class="px-3 py-1.5 rounded bg-surface-container-high opacity-50 cursor-not-allowed"
+                            disabled="" type="button">PREV</button>
+                        <button class="px-3 py-1.5 rounded bg-primary-container text-on-primary"
+                            type="button">1</button>
+                        <button class="px-3 py-1.5 rounded bg-surface-container-high opacity-50 cursor-not-allowed"
+                            disabled="" type="button">NEXT</button>
+                    </div>
+                </div>
+            </section>
+            <script>
+                (function () {
+                    const filterButtons = document.querySelectorAll('.filter-btn');
+                    const cards = document.querySelectorAll('.news-card');
+
+                    filterButtons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            const filter = button.getAttribute('data-filter');
+
+                            filterButtons.forEach(btn => {
+                                btn.classList.remove('bg-primary-container', 'text-on-primary');
+                                btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+                            });
+
+                            button.classList.remove('bg-surface-container', 'text-on-surface-variant');
+                            button.classList.add('bg-primary-container', 'text-on-primary');
+
+                            cards.forEach(card => {
+                                const category = card.getAttribute('data-category');
+                                if (filter === 'all' || category === filter) {
+                                    card.style.display = 'flex';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+                })();
+            </script>
+        </div>
+    </main>
+    <aside class="fixed bottom-6 left-6 z-40"><a
+            class="flex items-center gap-2 px-4 py-3 rounded-full bg-error text-on-error shadow-[0_4px_16px_rgba(0,0,0,0.18)] hover:brightness-110 active:scale-95 transition-all"
+            data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">gavel</span><span
+                class="font-label-md text-label-md font-bold tracking-normal">တိုင်ကြားရန် (Report)</span></a></aside>
+    <footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="lg:col-span-2 flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+                            <span class="material-symbols-outlined text-[20px]">verified_user</span></div>
+                        <div class="flex flex-col"><span
+                                class="font-title-lg text-title-lg font-bold text-on-surface">GUARDIAN
+                                (PBVS)</span><span class="font-label-md text-label-md text-on-surface-variant">Business
+                                Integrity &amp; Risk Information Platform</span></div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Providing institutional-grade
+                        compliance checks, verified enterprise records, and public-interest fraud deterrence for
+                        Myanmar's emerging commercial ecosystem.</p>
+                    <div class="flex items-center gap-2 mt-2"><a aria-label="Facebook"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a
+                            aria-label="LinkedIn"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a
+                            aria-label="TikTok"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">play_circle</span></a><a
+                            aria-label="Telegram"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">send</span></a></div>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Platform
+                        Links</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="home" href="#">Home</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="black-list" href="#">Black List</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="companies" href="#">Companies</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="background-verification" href="#">Background Verification</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="warning-news" href="#">Warning &amp; News</a></nav>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Organization</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="about-us" href="#">About Us</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="contact" href="#">Contact</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="person-profile" href="#">Person Directory</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="company-profile" href="#">Company Registry</a></nav>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Legal
+                        &amp; Trust</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Privacy Policy</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Terms of Use</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Data Protection</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="contact" href="#">Appeal / Report</a></nav>
+                </div>
+            </div>
+            <div
+                class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-md text-body-md text-on-surface-variant">
+                <p>© 2026 GUARDIAN (PBVS). All Rights Reserved.</p>
+                <div class="flex items-center gap-6"><span class="inline-flex items-center gap-1.5"><span
+                            class="w-2 h-2 rounded-full bg-secondary-container"></span>Security
+                        Verified</span><span>Institutional Data Integrity Standard v3.4</span></div>
+            </div>
+        </div>
+    </footer>
+<section class="stitch-functional-panel"><div class="card"><h2>Published Notices</h2>{% for item in news_items %}<article style="padding:16px 0;border-bottom:1px solid #e0e3e5"><strong>{{ item.get_category_display }}</strong><h3>{{ item.title }}</h3><p>{{ item.summary }}</p><small>{{ item.published_at|default:item.created_at }}</small></article>{% empty %}<p>No current notices.</p>{% endfor %}</div></section><script src="/static/js/guardian.js"></script></body>
+
+</html>

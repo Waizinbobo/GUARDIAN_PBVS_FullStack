@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GUARDIAN (PBVS)</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { "darkMode": "class", "theme": { "extend": { "colors": { "error": "#ba1a1a", "primary-container": "#131b2e", "surface": "#f7f9fb", "on-secondary": "#ffffff", "on-error": "#ffffff", "primary-fixed": "#dae2fd", "on-background": "#191c1e", "surface-container-low": "#f2f4f6", "surface-bright": "#f7f9fb", "on-error-container": "#93000a", "tertiary-fixed-dim": "#b7c8e1", "secondary-fixed-dim": "#e9c349", "surface-container": "#eceef0", "on-secondary-fixed": "#241a00", "surface-dim": "#d8dadc", "secondary-fixed": "#ffe088", "background": "#f7f9fb", "tertiary-container": "#0b1c30", "inverse-surface": "#2d3133", "on-tertiary-container": "#75859d", "error-container": "#ffdad6", "surface-variant": "#e0e3e5", "on-tertiary-fixed": "#0b1c30", "surface-tint": "#565e74", "tertiary": "#000000", "surface-container-high": "#e6e8ea", "primary": "#000000", "outline": "#76777d", "on-secondary-fixed-variant": "#574500", "on-primary-container": "#7c839b", "on-primary-fixed": "#131b2e", "on-primary-fixed-variant": "#3f465c", "on-surface": "#191c1e", "inverse-on-surface": "#eff1f3", "inverse-primary": "#bec6e0", "secondary-container": "#fed65b", "tertiary-fixed": "#d3e4fe", "surface-container-lowest": "#ffffff", "secondary": "#735c00", "on-tertiary-fixed-variant": "#38485d", "outline-variant": "#c6c6cd", "on-surface-variant": "#45464d", "on-secondary-container": "#745c00", "on-primary": "#ffffff", "surface-container-highest": "#e0e3e5", "on-tertiary": "#ffffff", "primary-fixed-dim": "#bec6e0" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "16px", "container-max": "1440px", "margin-desktop": "32px", "base": "8px", "gutter": "24px" }, "fontFamily": { "label-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "title-lg": ["Inter"], "headline-lg": ["Inter"], "code": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface min-h-screen relative">
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div
+            class="h-20 max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4">
+            <a class="flex items-center gap-3 shrink-0 text-left" data-path="home" href="#">
+                <div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+                    <span class="material-symbols-outlined text-[24px]">verified_user</span></div>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-1.5"><span
+                            class="font-title-lg text-title-lg tracking-tight text-on-surface font-bold">GUARDIAN</span><span
+                            class="font-label-md text-label-md px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">PBVS</span>
+                    </div><span
+                        class="hidden lg:block font-label-md text-[11px] text-on-surface-variant font-medium tracking-normal">Business
+                        Integrity &amp; Risk Information Platform</span>
+                </div>
+            </a>
+            <nav class="hidden xl:flex items-center gap-1"
+                data-active-classes="bg-surface-container text-on-surface font-semibold rounded-lg"><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="home" href="#">Home</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="black-list" href="#">Black List</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="companies" href="#">Companies</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="background-verification" href="#">Background Verification</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="warning-news" href="#">Warning &amp; News</a><a aria-current="page"
+                    class="px-3 py-2 transition-colors bg-surface-container text-on-surface font-semibold rounded-lg"
+                    data-path="about-us" href="#">About Us</a><a
+                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    data-path="contact" href="#">Contact</a></nav>
+            <div class="flex items-center gap-3 shrink-0"><a
+                    class="flex items-center gap-2.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary transition-all font-body-md text-body-md font-medium"
+                    data-path="login" href="#"><span class="hidden sm:inline">User Account</span>
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+                </a><button
+                    class="xl:hidden p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+                    type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-screen">
+        <div class="flex flex-col w-full">
+            <!-- SECTION: Strategic Header & Identity Narrative -->
+            <section class="relative w-full bg-surface-container-lowest overflow-hidden">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-16 lg:py-24">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-7 flex flex-col items-start">
+                            <div
+                                class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-surface-container-low text-primary-container mb-6">
+                                <span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                                <span
+                                    class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Corporate
+                                    Dossier &amp; Institutional Profile</span>
+                            </div>
+                            <h1 class="font-display-lg text-display-lg text-on-surface tracking-tight font-bold mb-6">
+                                GUARDIAN အကြောင်း <span
+                                    class="text-on-surface-variant font-body-lg text-title-lg font-normal block mt-2">(About
+                                    GUARDIAN PBVS)</span>
+                            </h1>
+                            <p
+                                class="font-headline-md text-headline-md text-on-surface font-semibold mb-6 leading-relaxed">
+                                GUARDIAN (PBVS) သည် လုပ်ငန်းခွင်နှင့် အဖွဲ့အစည်းများအတွက် ယုံကြည်စိတ်ချရသော
+                                အချက်အလက်စစ်ဆေးခြင်းနှင့် လုပ်ငန်းအန္တရာယ်ဆိုင်ရာ အချက်အလက်များကို ပံ့ပိုးပေးသည့်
+                                Law-Tech B2B SaaS Platform ဖြစ်ပါသည်။
+                            </p>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-8">
+                                မြန်မာနိုင်ငံ၏ လျင်မြန်စွာ ပြောင်းလဲတိုးတက်နေသော စီးပွားရေးအခင်းအကျင်းတွင်
+                                အဖွဲ့အစည်းများအကြား ယုံကြည်မှုနှင့် တည်ငြိမ်မှုကို တည်ဆောက်နိုင်ရန် လွတ်လပ်သော Risk
+                                Intelligence နှင့် Background Verification စနစ်သည် မရှိမဖြစ်လိုအပ်ပါသည်။ ကျွန်ုပ်တို့သည်
+                                Institutional-Grade Verification Framework များကို အသုံးပြု၍ ခိုင်လုံသော
+                                မှတ်တမ်းအထောက်အထားများဖြင့် စီးပွားရေးအန္တရာယ်များကို ကြိုတင်ကာကွယ်ပေးနေပါသည်။
+                            </p>
+                            <div class="grid grid-cols-3 gap-6 w-full pt-6">
+                                <div class="flex flex-col bg-surface-container-low p-4 rounded-xl">
+                                    <span
+                                        class="font-display-lg text-headline-lg text-primary-container font-bold">120K+</span>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase mt-1">Verified
+                                        Records</span>
+                                </div>
+                                <div class="flex flex-col bg-surface-container-low p-4 rounded-xl">
+                                    <span
+                                        class="font-display-lg text-headline-lg text-primary-container font-bold">99.8%</span>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase mt-1">Audit
+                                        Accuracy</span>
+                                </div>
+                                <div class="flex flex-col bg-surface-container-low p-4 rounded-xl">
+                                    <span class="font-display-lg text-headline-lg text-secondary font-bold">B2B
+                                        SaaS</span>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase mt-1">Law-Tech
+                                        Core</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 relative">
+                            <div
+                                class="relative w-full h-[460px] rounded-2xl overflow-hidden shadow-xl bg-surface-container">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="A modern institutional legal intelligence office with floor-to-ceiling glass in Yangon, showing analysts reviewing enterprise data dashboards on high-resolution screens in subtle deep navy, clean white, and gold accented interior."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA25DGYHOm07Eo-9EOJE_ZLkHLURTtflccB8g7DcyRiNlYD7BakyMlSxudujhWsW_Gv3GYjZPbSOiGWs4Dd9YdKwMR3urPgYa2NoxkdoxfgN0eGNpLqZJ0tHdwxWWmxKrEOK2RC2QLlZOKvF3_k_q3uBzS1C8mpi6tz2N3PIVkaqGHnvbHP9ieTKQoByFy1w1XBxZRsygqdCnPYMXxaCVv6vcxcpyrjqWsc5vMEYGp5XjiczyEbhW58Hg" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/30 to-transparent flex flex-col justify-end p-8">
+                                    <div class="flex items-center gap-2 text-secondary-fixed mb-2">
+                                        <span class="material-symbols-outlined text-[20px]"
+                                            style="font-variation-settings: 'FILL' 1;">verified</span>
+                                        <span
+                                            class="font-label-md text-label-md tracking-wider uppercase font-bold">Audited
+                                            Verification Ecosystem</span>
+                                    </div>
+                                    <p class="font-body-md text-body-md text-on-primary">
+                                        လွတ်လပ်သော အချက်အလက်စိစစ်မှု၊ ဘက်မလိုက်သော ဥပဒေရေးရာ ခွဲခြမ်းစိတ်ဖြာမှုနှင့်
+                                        ကော်ပိုရိတ်အုပ်ချုပ်မှု အဆင့်မြင့်စံနှုန်းများ။
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION: Corporate Narrative & Founding Context -->
+            <section class="w-full bg-surface py-16">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div class="bg-surface-container-lowest rounded-2xl p-8 lg:p-12 shadow-sm">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                            <div class="lg:col-span-4 flex flex-col">
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span class="w-8 h-1 bg-secondary rounded-full"></span>
+                                    <span
+                                        class="font-label-md text-label-md text-secondary uppercase tracking-wider font-bold">Genesis
+                                        &amp; Motivation</span>
+                                </div>
+                                <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+                                    ကျွန်ုပ်တို့ တည်ထောင်ရခြင်း၏ သမိုင်းကြောင်းနှင့် နောက်ခံ
+                                </h2>
+                                <p class="font-body-md text-body-md text-on-surface-variant mt-4 leading-relaxed">
+                                    စီးပွားရေး အကျိုးတူပူးပေါင်းဆောင်ရွက်မှုများနှင့် လူသားအရင်းအမြစ် ခန့်အပ်မှုများတွင်
+                                    သတင်းအချက်အလက် မမှန်ကန်မှုကြောင့် ဖြစ်ပေါ်လာရသော ဆုံးရှုံးမှုများကို လျှော့ချရန်
+                                    လွတ်လပ်သောစိစစ်မှုစနစ်တစ်ရပ် ထူထောင်ခဲ့ခြင်းဖြစ်ပါသည်။
+                                </p>
+                            </div>
+                            <div
+                                class="lg:col-span-8 space-y-6 text-on-surface font-body-lg text-body-lg leading-relaxed">
+                                <p>
+                                    မြန်မာ့စီးပွားရေးလုပ်ငန်းလောကအတွင်း စာချုပ်စာတမ်းလိမ်လည်မှုများ၊ မမှန်ကန်သော
+                                    အလုပ်အကိုင်မှတ်တမ်းများနှင့် အဖွဲ့အစည်းဆိုင်ရာ ပွင့်လင်းမြင်သာမှုကင်းမဲ့ခြင်းများသည်
+                                    ရင်းနှီးမြှုပ်နှံသူများနှင့် ကော်ပိုရိတ်အဖွဲ့အစည်းများအတွက် ကြီးမားသောဘဏ္ဍာရေးနှင့်
+                                    ဂုဏ်သိက္ခာဆိုင်ရာ အန္တရာယ်များကို ဖြစ်ပေါ်စေခဲ့ပါသည်။
+                                </p>
+                                <p>
+                                    GUARDIAN (Pre-employment &amp; Business Verification System - PBVS) ကို
+                                    စတင်တည်ထောင်ရခြင်း၏ အဓိကရည်ရွယ်ချက်မှာ အဖွဲ့အစည်းများအတွက် ပကတိခိုင်လုံသော
+                                    အထောက်အထားများ၊ ဥပဒေကြောင်းဆိုင်ရာ တိကျမှုများနှင့် မဟုတ်မမှန် သတင်းတုများကို
+                                    သေချာစွာ စိစစ်နိုင်မည့် <strong>Institutional-grade Risk Verification</strong>
+                                    ပလက်ဖောင်းတစ်ခုအဖြစ် ဝန်ဆောင်မှုပေးရန် ဖြစ်ပါသည်။
+                                </p>
+                                <div
+                                    class="p-6 rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                                            <span class="material-symbols-outlined text-[24px]">gavel</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-title-lg text-title-lg font-bold text-on-surface">Law-Tech
+                                                Compliance Standards</h3>
+                                            <p class="font-body-md text-body-md text-on-surface-variant">အချက်အလက်
+                                                လုံခြုံရေးနှင့် ကိုယ်ရေးလွတ်လပ်ခွင့် ဥပဒေမူဘောင်များနှင့် အညီ
+                                                ရေးဆွဲတည်ဆောက်ထားပါသည်။</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="font-label-md text-label-md px-3 py-1.5 rounded bg-surface-container-high text-on-surface font-semibold shrink-0">ISO-Aligned</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION: Vision, Mission & Trajectory Roadmap -->
+            <section class="w-full bg-surface-container-low py-16 lg:py-24">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <!-- Section Header -->
+                    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+                        <span
+                            class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider mb-2">Direction
+                            &amp; Purpose</span>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">ရည်မှန်းချက်၊
+                            မစ်ရှင်နှင့် အနာဂတ်လမ်းပြမြေပုံ</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant mt-3">
+                            ကျွန်ုပ်တို့သည် ဒေသတွင်းလုပ်ငန်းလုံခြုံမှုစံနှုန်းများကို မြှင့်တင်ကာ ကမ္ဘာ့အဆင့်မီ
+                            စိစစ်ရေးစနစ်အဖြစ် ရပ်တည်သွားမည်။
+                        </p>
+                    </div>
+                    <!-- Vision & Mission Dual Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                        <!-- Vision Card -->
+                        <div
+                            class="bg-surface-container-lowest rounded-2xl p-8 lg:p-10 shadow-sm flex flex-col justify-between relative overflow-hidden">
+                            <div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary-container"></div>
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-6">
+                                    <span class="material-symbols-outlined text-[28px]">visibility</span>
+                                </div>
+                                <span
+                                    class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider">Vision</span>
+                                <h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1 mb-4">
+                                    ကျွန်ုပ်တို့၏ Vision</h3>
+                                <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                                    "ယုံကြည်စိတ်ချရပြီး ကျင့်ဝတ်နှင့် ကိုက်ညီသော လုပ်ငန်းခွင်များ ပေါ်ပေါက်လာစေရန်နှင့်
+                                    အချက်အလက်အခြေပြု ဆုံးဖြတ်ချက်ချနိုင်သည့် လုပ်ငန်းပတ်ဝန်းကျင်တစ်ရပ် တည်ဆောက်ရန်။"
+                                </p>
+                            </div>
+                            <div
+                                class="mt-8 pt-6 flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+                                <span class="material-symbols-outlined text-[20px] text-secondary">check_circle</span>
+                                <span>Ethical Governance &amp; Data-Driven Commercial Trust</span>
+                            </div>
+                        </div>
+                        <!-- Mission Card -->
+                        <div
+                            class="bg-surface-container-lowest rounded-2xl p-8 lg:p-10 shadow-sm flex flex-col justify-between relative overflow-hidden">
+                            <div class="absolute top-0 left-0 right-0 h-1.5 bg-primary-container"></div>
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-6">
+                                    <span class="material-symbols-outlined text-[28px]">track_changes</span>
+                                </div>
+                                <span
+                                    class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider">Mission</span>
+                                <h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1 mb-4">
+                                    ကျွန်ုပ်တို့၏ Mission</h3>
+                                <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                                    "အထောက်အထားအခြေပြု စစ်ဆေးအတည်ပြုခြင်း၊ ပွင့်လင်းမြင်သာသော အချက်အလက်ဖော်ပြခြင်းနှင့်
+                                    တာဝန်ယူမှုရှိသော Verification System များမှတစ်ဆင့် လုပ်ငန်းများ၏ လူအင်အားနှင့်
+                                    အဖွဲ့အစည်းဆိုင်ရာ အန္တရာယ်များကို လျှော့ချနိုင်ရန်။"
+                                </p>
+                            </div>
+                            <div
+                                class="mt-8 pt-6 flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+                                <span class="material-symbols-outlined text-[20px] text-primary">security</span>
+                                <span>Evidence-Based Mitigation &amp; Corporate Integrity</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Roadmap Component -->
+                    <div class="bg-surface-container-lowest rounded-2xl p-8 lg:p-12 shadow-sm">
+                        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6">
+                            <div>
+                                <span
+                                    class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Strategic
+                                    Expansion</span>
+                                <h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">
+                                    ဖွံ့ဖြိုးတိုးတက်မှု လမ်းပြမြေပုံ (Trajectory Roadmap)</h3>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-2 md:mt-0">
+                                ပြည်တွင်းအဆင့်မှ အာဆီယံနှင့် နိုင်ငံတကာအဆင့်သို့ တိုးချဲ့ခြင်း
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                            <!-- Phase 1 -->
+                            <div class="relative flex flex-col bg-surface-container-low p-6 rounded-xl">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-md text-label-md font-bold">Phase
+                                        01</span>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant font-semibold">ESTABLISHED</span>
+                                </div>
+                                <h4 class="font-title-lg text-title-lg font-bold text-on-surface mb-2">Myanmar
+                                    Foundation</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    မြန်မာနိုင်ငံအတွင်းရှိ အဓိကစီးပွားရေးလုပ်ငန်းကြီးများ၊ SME များနှင့်
+                                    နိုင်ငံတကာအဖွဲ့အစည်းများအတွက် ပထမဆုံးသော Law-Tech Risk &amp; Compliance Verification
+                                    ဂေဟစနစ်ကို တည်ဆောက်ခြင်း။
+                                </p>
+                                <div
+                                    class="mt-6 pt-4 flex items-center gap-2 text-on-surface-variant font-code text-code">
+                                    <span class="material-symbols-outlined text-[18px] text-secondary">fact_check</span>
+                                    <span>100% Domestic Legal Compliance</span>
+                                </div>
+                            </div>
+                            <!-- Phase 2 -->
+                            <div class="relative flex flex-col bg-surface-container-low p-6 rounded-xl">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="px-2.5 py-1 rounded bg-primary-container text-on-primary font-label-md text-label-md font-bold">Phase
+                                        02</span>
+                                    <span
+                                        class="font-label-md text-label-md text-secondary font-semibold">EXPANDING</span>
+                                </div>
+                                <h4 class="font-title-lg text-title-lg font-bold text-on-surface mb-2">Asia Regional
+                                    Hubs</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    အရှေ့တောင်အာရှ (ASEAN) နိုင်ငံများရှိ ဒေသတွင်းရင်းနှီးမြှုပ်နှံသူများနှင့်
+                                    နယ်စပ်ဖြတ်ကျော် စီးပွားရေးလုပ်ငန်းများအတွက် Cross-Border Background Check &amp;
+                                    Compliance API Hub အဖြစ် တိုးချဲ့ဆောင်ရွက်ခြင်း။
+                                </p>
+                                <div
+                                    class="mt-6 pt-4 flex items-center gap-2 text-on-surface-variant font-code text-code">
+                                    <span class="material-symbols-outlined text-[18px] text-primary">hub</span>
+                                    <span>Singapore / Bangkok Cross-Link</span>
+                                </div>
+                            </div>
+                            <!-- Phase 3 -->
+                            <div class="relative flex flex-col bg-surface-container-low p-6 rounded-xl">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span
+                                        class="px-2.5 py-1 rounded bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold">Phase
+                                        03</span>
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant font-semibold">TARGET
+                                        2028</span>
+                                </div>
+                                <h4 class="font-title-lg text-title-lg font-bold text-on-surface mb-2">Global B2B
+                                    Standard</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    ကမ္ဘာလုံးဆိုင်ရာ အဖွဲ့အစည်းကြီးများ အသိအမှတ်ပြုသော FCPA, AML/CFT နှင့် ESG
+                                    စံနှုန်းများနှင့် ကိုက်ညီသည့် အဆင့်မြင့် ဉာဏ်ရည်တုအခြေပြု Enterprise Risk
+                                    Intelligence Framework အဖြစ် အသွင်ကူးပြောင်းခြင်း။
+                                </p>
+                                <div
+                                    class="mt-6 pt-4 flex items-center gap-2 text-on-surface-variant font-code text-code">
+                                    <span class="material-symbols-outlined text-[18px] text-primary">public</span>
+                                    <span>Global Enterprise SaaS Benchmark</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION: 8 Corporate Pillars & Philosophy Bento Grid -->
+            <section class="w-full bg-surface-container-lowest py-16 lg:py-24">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                        <div class="max-w-2xl">
+                            <span
+                                class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Institutional
+                                Architecture</span>
+                            <h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-1">အခြေခံ
+                                မူဝါဒနှင့် စိစစ်မှုဆိုင်ရာ ဒေါက်တိုင်ကြီး (၈) ခု</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                                GUARDIAN ၏ ဆုံးဖြတ်ချက်တိုင်း၊ အချက်အလက်ဖော်ပြချက်တိုင်းနှင့် စစ်ဆေးစိစစ်မှုတိုင်းကို
+                                လမ်းညွှန်ထိန်းကျောင်းနေသော ခိုင်မာသည့် အခြေခံသဘောတရားများ။
+                            </p>
+                        </div>
+                        <div class="mt-4 md:mt-0 flex items-center gap-2">
+                            <span
+                                class="font-label-md text-label-md px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-semibold">8
+                                Pillars of Trust</span>
+                        </div>
+                    </div>
+                    <!-- Bento Grid (8 Pillars) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Pillar 1: Purpose -->
+                        <div
+                            class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center mb-5">
+                                    <span class="material-symbols-outlined text-[22px]">flag</span>
+                                </div>
+                                <span class="font-code text-code text-on-surface-variant font-semibold uppercase">01 /
+                                    PILLAR</span>
+                                <h3 class="font-title-lg text-title-lg font-bold text-on-surface mt-1 mb-2">Our Purpose
+                                </h3>
+                                <span class="font-label-md text-label-md text-secondary block mb-3">(လုပ်ငန်း
+                                    ရည်ရွယ်ချက်)</span>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    လုပ်ငန်းလိမ်လည်မှုများ ကာကွယ်ရန်နှင့် စစ်မှန်သော စီးပွားရေးလုပ်ငန်းရှင်များနှင့်
+                                    ကျင့်ဝတ်လိုက်နာသည့် ဝန်ထမ်းများအတွက် လုံခြုံသော ပတ်ဝန်းကျင်ဖန်တီးပေးရန်။
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Pillar 2: Principles -->
+                        <div
+                            class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center mb-5">
+                                    <span class="material-symbols-outlined text-[22px]">balance</span>
+                                </div>
+                                <span class="font-code text-code text-on-surface-variant font-semibold uppercase">02 /
+                                    PILLAR</span>
+                                <h3 class="font-title-lg text-title-lg font-bold text-on-surface mt-1 mb-2">Our
+                                    Principles</h3>
+                                <span class="font-label-md text-label-md text-secondary block mb-3">(အခြေခံ
+                                    မူဝါဒများ)</span>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    ဘက်မလိုက်ခြင်း၊ သမာသမတ်ကျခြင်း၊ လွတ်လပ်စွာ ဆုံးဖြတ်ခြင်းနှင့်
+                                    ဥပဒေစည်းမျဉ်းစည်းကမ်းများကို အပြည့်အဝ လေးစားလိုက်နာခြင်း။
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Pillar 3: Verification Philosophy -->
+                        <div
+                            class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center mb-5">
+                                    <span class="material-symbols-outlined text-[22px]">psychology</span>
+                                </div>
+                                <span class="font-code text-code text-on-surface-variant font-semibold uppercase">03 /
+                                    PILLAR</span>
+                                <h3 class="font-title-lg text-title-lg font-bold text-on-surface mt-1 mb-2">Verification
+                                    Philosophy</h3>
+                                <span class="font-label-md text-label-md text-secondary block mb-3">(စိစစ်မှု
+                                    သဘောတရား)</span>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    ခန့်မှန်းချက်များနှင့် ထင်မြင်ယူဆချက်များကို လုံးဝအသုံးမပြုဘဲ စစ်ဆေးအတည်ပြုပြီးသော
+                                    အချက်အလက်များပေါ်တွင်သာ ရပ်တည်ဆန်းစစ်ခြင်း။
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Pillar 4: Transparency -->
+                        <div
+                            class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center mb-5">
+                                    <span class="material-symbols-outlined text-[22px]">visibility_lock</span>
+                                </div>
+                                <span class="font-code text-code text-on-surface-variant font-semibold uppercase">04 /
+                                    PILLAR</span>
+                                <h3 class="font-title-lg text-title-lg font-bold text-on-surface mt-1 mb-2">Transparency
+                                </h3>
+                                <span
+                                    class="font-label-md text-label-md text-secondary block mb-3">(ပွင့်လင်းမြင်သာမှု)</span>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    အချက်အလက်ရယူပုံ၊ စစ်ဆေးပုံ နည်းလမ်းများနှင့် အစီရင်ခံစာထုတ်ပြန်မှု အဆင့်တိုင်းတွင်
+                                    ရှင်းလင်းပွင့်လင်းသော လုပ်ငန်းစဉ်ရှိခြင်း။
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Pillar 5: Evidence -->
+                        <div
+                            class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center mb-5">
+                                    <span class="material-symbols-outlined text-[22px]">folder_special</span>
+                                </div>
+                                <span class="font-code text-code text-on-surface-variant font-semibold uppercase">05 /
+                                    PILLAR</span>
+                                <h3 class="font-title-lg text-title-lg font-bold text-on-surface mt-1 mb-2">Evidence
+                                </h3>
+                                <span class="font-label-md text-label-md text-secondary block mb-3">(ခိုင်လုံသော
+                                    သက်သေအထောက်အထား)</span>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    တင်ပြချက်တိုင်းတွင် တရားဝင်မှတ်တမ်းများ၊ လက်မှတ်ရေးထိုးထားသော စာရွက်စာတမ်းများနှင့်
+                                    တိကျခိုင်မာသည့် သက်သေများ ပါဝင်ရမည်။
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Pillar 6: Fairness -->
+                        <div
+                            class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center mb-5">
+                                    <span class="material-symbols-outlined text-[22px]">shield_person</span>
+                                </div>
+                                <span class="font-code text-code text-on-surface-variant font-semibold uppercase">06 /
+                                    PILLAR</span>
+                                <h3 class="font-title-lg text-title-lg font-bold text-on-surface mt-1 mb-2">Fairness
+                                </h3>
+                                <span class="font-label-md text-label-md text-secondary block mb-3">(တရားမျှတသော
+                                    ချဉ်းကပ်မှု)</span>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    စစ်ဆေးခံရသူနှင့် စစ်ဆေးသူ နှစ်ဦးစလုံးအတွက် သက်သေပြချေပခွင့်၊ အယူခံဝင်ခွင့်နှင့်
+                                    တရားမျှတသော ပြန်လည်စိစစ်ခွင့်ကို ပေးအပ်ထားခြင်း။
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Pillar 7: Security -->
+                        <div
+                            class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center mb-5">
+                                    <span class="material-symbols-outlined text-[22px]">encrypted</span>
+                                </div>
+                                <span class="font-code text-code text-on-surface-variant font-semibold uppercase">07 /
+                                    PILLAR</span>
+                                <h3 class="font-title-lg text-title-lg font-bold text-on-surface mt-1 mb-2">Security
+                                </h3>
+                                <span class="font-label-md text-label-md text-secondary block mb-3">(လုံခြုံရေး
+                                    စံနှုန်းများ)</span>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    အဆင့်မြင့် ဒေတာ ကုဒ်ဝှက်စနစ် (256-bit Encryption) နှင့် နိုင်ငံတကာ အဆင့်မီ
+                                    ကာကွယ်ရေးစနစ်များဖြင့် အချက်အလက်များ မပေါက်ကြားစေရန် ထိန်းသိမ်းခြင်း။
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Pillar 8: Accountability -->
+                        <div
+                            class="p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center mb-5">
+                                    <span class="material-symbols-outlined text-[22px]">assignment_turned_in</span>
+                                </div>
+                                <span class="font-code text-code text-on-surface-variant font-semibold uppercase">08 /
+                                    PILLAR</span>
+                                <h3 class="font-title-lg text-title-lg font-bold text-on-surface mt-1 mb-2">
+                                    Accountability</h3>
+                                <span class="font-label-md text-label-md text-secondary block mb-3">(တာဝန်ယူမှု၊
+                                    တာဝန်ခံမှု)</span>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    ထုတ်ပြန်ပေးအပ်လိုက်သော အချက်အလက်နှင့် အစီရင်ခံစာများအပေါ် အဖွဲ့အစည်းအနေဖြင့်
+                                    အပြည့်အဝ တာဝန်ခံနိုင်သော စနစ်ဖြင့် ဆောင်ရွက်ခြင်း။
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION: Interactive Compliance Framework Visual -->
+            <section class="w-full bg-surface py-16">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+                    <div
+                        class="bg-surface-container-lowest rounded-2xl p-8 lg:p-12 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
+                        <div class="max-w-xl">
+                            <div class="flex items-center gap-2 text-secondary mb-3">
+                                <span class="material-symbols-outlined text-[20px]">verified_user</span>
+                                <span class="font-label-md text-label-md tracking-wider uppercase font-bold">Audit
+                                    Assurance Process</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-surface font-bold">ဘက်စုံအဆင့်ဆင့်
+                                စိစစ်ရေးစနစ်</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mt-3 leading-relaxed">
+                                ကျွန်ုပ်တို့၏ စနစ်သည် ရိုးရှင်းသော အမည်ရှာဖွေခြင်းမျိုးမဟုတ်ဘဲ၊ တရားရုံးမှတ်တမ်း၊
+                                အခွန်မှတ်တမ်း၊ ကုမ္ပဏီမှတ်ပုံတင်ခြင်းနှင့် ပရော်ဖက်ရှင်နယ်ရာဇဝင် အပါအဝင် အဆင့် ၄
+                                ဆင့်ဖြင့် တိကျစွာ အတည်ပြုပါသည်။
+                            </p>
+                            <div class="flex flex-wrap gap-3 mt-6">
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold">1.
+                                    Primary Source Extraction</span>
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold">2.
+                                    Cross-Entity Matching</span>
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold">3.
+                                    Legal Review</span>
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold">4.
+                                    Immutable Audit Trail</span>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-auto shrink-0">
+                            <div class="p-6 rounded-2xl bg-surface-container-low flex flex-col gap-4 min-w-[280px]">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-label-md text-label-md text-on-surface-variant">Standard Integrity
+                                        Score</span>
+                                    <span class="font-title-lg text-title-lg font-bold text-primary">99.98%</span>
+                                </div>
+                                <!-- Inline SVG Metric Visual -->
+                                <svg class="w-full h-12 text-primary-container" fill="none" viewbox="0 0 260 40">
+                                    <path d="M0 35 L40 30 L80 32 L120 20 L160 22 L200 10 L240 12 L260 5"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="3"></path>
+                                    <circle cx="260" cy="5" fill="currentColor" r="4"></circle>
+                                </svg>
+                                <div
+                                    class="flex items-center justify-between text-on-surface-variant font-code text-code pt-2">
+                                    <span>Zero-Data Breach</span>
+                                    <span>256-Bit Vault</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION: Final Strategic Motto Block (Deep Navy Blue Banner) -->
+            <section class="w-full bg-primary-container text-on-primary py-20 lg:py-28 relative overflow-hidden">
+                <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+                    <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-md flex items-center justify-center text-secondary-container mb-8">
+                            <span class="material-symbols-outlined text-[36px]"
+                                style="font-variation-settings: 'FILL' 1;">security</span>
+                        </div>
+                        <span
+                            class="font-label-md text-label-md text-secondary-fixed tracking-widest uppercase font-bold mb-4">
+                            GUARDIAN PBVS OPERATIONAL MOTTO
+                        </span>
+                        <h2 class="font-display-lg text-display-lg font-bold tracking-tight text-on-primary mb-6">
+                            "Protect Before You Trust"
+                        </h2>
+                        <p
+                            class="font-headline-md text-headline-md text-tertiary-fixed-dim font-medium mb-10 leading-relaxed">
+                            မယုံကြည်မီ သိရှိပါ။ မခန့်မီ စစ်ဆေးပါ။
+                        </p>
+                        <p
+                            class="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto mb-10 leading-relaxed">
+                            လုပ်ငန်းခွင်၏ လုံခြုံရေး၊ ဝန်ထမ်းခန့်အပ်မှု၏ တိကျမှုနှင့် မိတ်ဖက်ပူးပေါင်းဆောင်ရွက်မှုများ၏
+                            စိတ်ချရမှုကို GUARDIAN နှင့်အတူ စတင်တည်ဆောက်လိုက်ပါ။
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center gap-4">
+                            <a class="w-full sm:w-auto px-8 py-4 rounded-xl bg-secondary-container text-on-secondary-fixed font-title-lg text-title-lg font-bold hover:brightness-105 active:scale-95 transition-all text-center"
+                                data-path="contact" href="#">
+                                စိစစ်မှုစနစ် ချိတ်ဆက်ရန် ဆက်သွယ်ပါ
+                            </a>
+                            <a class="w-full sm:w-auto px-8 py-4 rounded-xl bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-on-primary font-title-lg text-title-lg font-semibold backdrop-blur-md transition-all text-center"
+                                data-path="background-verification" href="#">
+                                ဝန်ဆောင်မှုများ ကြည့်ရှုရန်
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Decorative background elements -->
+                <div
+                    class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-surface-container-lowest/5 blur-3xl pointer-events-none">
+                </div>
+                <div
+                    class="absolute -left-24 -top-24 w-96 h-96 rounded-full bg-secondary-container/5 blur-3xl pointer-events-none">
+                </div>
+            </section>
+        </div>
+    </main>
+    <aside class="fixed bottom-6 left-6 z-40"><a
+            class="flex items-center gap-2 px-4 py-3 rounded-full bg-error text-on-error shadow-[0_4px_16px_rgba(0,0,0,0.18)] hover:brightness-110 active:scale-95 transition-all"
+            data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">gavel</span><span
+                class="font-label-md text-label-md font-bold tracking-normal">တိုင်ကြားရန် (Report)</span></a></aside>
+    <footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <div class="lg:col-span-2 flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+                            <span class="material-symbols-outlined text-[20px]">verified_user</span></div>
+                        <div class="flex flex-col"><span
+                                class="font-title-lg text-title-lg font-bold text-on-surface">GUARDIAN
+                                (PBVS)</span><span class="font-label-md text-label-md text-on-surface-variant">Business
+                                Integrity &amp; Risk Information Platform</span></div>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Providing institutional-grade
+                        compliance checks, verified enterprise records, and public-interest fraud deterrence for
+                        Myanmar's emerging commercial ecosystem.</p>
+                    <div class="flex items-center gap-2 mt-2"><a aria-label="Facebook"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a
+                            aria-label="LinkedIn"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a
+                            aria-label="TikTok"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">play_circle</span></a><a
+                            aria-label="Telegram"
+                            class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-[20px]">send</span></a></div>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Platform
+                        Links</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="home" href="#">Home</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="black-list" href="#">Black List</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="companies" href="#">Companies</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="background-verification" href="#">Background Verification</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="warning-news" href="#">Warning &amp; News</a></nav>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Organization</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="about-us" href="#">About Us</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="contact" href="#">Contact</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="person-profile" href="#">Person Directory</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="company-profile" href="#">Company Registry</a></nav>
+                </div>
+                <div class="flex flex-col gap-3"><span
+                        class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Legal
+                        &amp; Trust</span>
+                    <nav class="flex flex-col gap-2.5"><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Privacy Policy</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Terms of Use</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            href="#">Data Protection</a><a
+                            class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+                            data-path="contact" href="#">Appeal / Report</a></nav>
+                </div>
+            </div>
+            <div
+                class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-md text-body-md text-on-surface-variant">
+                <p>© 2026 GUARDIAN (PBVS). All Rights Reserved.</p>
+                <div class="flex items-center gap-6"><span class="inline-flex items-center gap-1.5"><span
+                            class="w-2 h-2 rounded-full bg-secondary-container"></span>Security
+                        Verified</span><span>Institutional Data Integrity Standard v3.4</span></div>
+            </div>
+        </div>
+    </footer>
+<script src="/static/js/guardian.js"></script></body>
+
+</html>
