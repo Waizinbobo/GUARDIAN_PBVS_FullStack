@@ -1,2 +1,42 @@
 {% load static %}
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{% block title %}GUARDIAN (PBVS){% endblock %}</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="{% static 'css/app.css' %}"></head><body class="guardian-app"><header class="app-nav"><a class="brand" href="{% url 'home' %}">GUARDIAN (PBVS)</a><nav><a href="{% url 'home' %}">Home</a><a href="{% url 'blacklist' %}">Black List</a><a href="{% url 'companies' %}">Companies</a><a href="{% url 'verification' %}">Verify</a>{% if user.is_authenticated %}<a href="{% url 'dashboard' %}">Dashboard</a><form action="{% url 'logout' %}" method="post" style="display:inline">{% csrf_token %}<button class="btn btn-secondary" type="submit">Logout</button></form>{% else %}<a href="{% url 'login' %}">Login</a><a href="{% url 'register' %}">Register</a>{% endif %}</nav></header><main class="app-shell">{% if messages %}<ul class="messages">{% for message in messages %}<li>{{ message }}</li>{% endfor %}</ul>{% endif %}{% block content %}{% endblock %}</main></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}GUARDIAN (PBVS){% endblock %}</title>
+    {% include 'core/partials/stitch_head_assets.html' %}
+    <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body
+    class="bg-surface-container-lowest font-body-md text-body-md text-on-surface min-h-screen relative"
+  >
+    {% include 'core/partials/master_navbar.html' %}
+
+    {% if messages %}
+    <ul class="messages max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-24">
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+
+    {% block extra_js %}{% endblock %}
+    <script>
+      (function () {
+        var toggle = document.getElementById("guardian-nav-toggle");
+        var menu = document.getElementById("guardian-mobile-menu");
+        var icon = document.getElementById("guardian-nav-toggle-icon");
+        if (!toggle || !menu) return;
+        toggle.addEventListener("click", function () {
+          var open = menu.classList.toggle("hidden") === false;
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          if (icon) icon.textContent = open ? "close" : "menu";
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,96 +1,7 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>GUARDIAN (PBVS)</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <style>
-        @layer base {
-
-            html,
-            body {
-                margin: 0;
-                padding: 0;
-            }
-
-            body {
-                overscroll-behavior: none;
-            }
-
-            main>:first-child {
-                margin-top: 0 !important;
-            }
-
-            main>:last-child {
-                margin-bottom: 0 !important;
-            }
-        }
-
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-        id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"error": "#ba1a1a", "primary-container": "#131b2e", "surface": "#f7f9fb", "on-secondary": "#ffffff", "on-error": "#ffffff", "primary-fixed": "#dae2fd", "on-background": "#191c1e", "surface-container-low": "#f2f4f6", "surface-bright": "#f7f9fb", "on-error-container": "#93000a", "tertiary-fixed-dim": "#b7c8e1", "secondary-fixed-dim": "#e9c349", "surface-container": "#eceef0", "on-secondary-fixed": "#241a00", "surface-dim": "#d8dadc", "secondary-fixed": "#ffe088", "background": "#f7f9fb", "tertiary-container": "#0b1c30", "inverse-surface": "#2d3133", "on-tertiary-container": "#75859d", "error-container": "#ffdad6", "surface-variant": "#e0e3e5", "on-tertiary-fixed": "#0b1c30", "surface-tint": "#565e74", "tertiary": "#000000", "surface-container-high": "#e6e8ea", "primary": "#000000", "outline": "#76777d", "on-secondary-fixed-variant": "#574500", "on-primary-container": "#7c839b", "on-primary-fixed": "#131b2e", "on-primary-fixed-variant": "#3f465c", "on-surface": "#191c1e", "inverse-on-surface": "#eff1f3", "inverse-primary": "#bec6e0", "secondary-container": "#fed65b", "tertiary-fixed": "#d3e4fe", "surface-container-lowest": "#ffffff", "secondary": "#735c00", "on-tertiary-fixed-variant": "#38485d", "outline-variant": "#c6c6cd", "on-surface-variant": "#45464d", "on-secondary-container": "#745c00", "on-primary": "#ffffff", "surface-container-highest": "#e0e3e5", "on-tertiary": "#ffffff", "primary-fixed-dim": "#bec6e0"}, "borderRadius": {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"}, "spacing": {"margin-mobile": "16px", "container-max": "1440px", "margin-desktop": "32px", "base": "8px", "gutter": "24px"}, "fontFamily": {"label-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-md": ["Inter"], "title-lg": ["Inter"], "headline-lg": ["Inter"], "code": ["Inter"], "display-lg": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"]}, "fontSize": {"label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "code": ["13px", {"lineHeight": "18px", "fontWeight": "400"}], "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]}}}};</script>
-</head>
-
-<body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface min-h-screen relative">
-    <header
-        class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-        <div
-            class="h-20 max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4">
-            <a class="flex items-center gap-3 shrink-0 text-left" data-path="home" href="#">
-                <div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
-                    <span class="material-symbols-outlined text-[24px]">verified_user</span></div>
-                <div class="flex flex-col">
-                    <div class="flex items-center gap-1.5"><span
-                            class="font-title-lg text-title-lg tracking-tight text-on-surface font-bold">GUARDIAN</span><span
-                            class="font-label-md text-label-md px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">PBVS</span>
-                    </div><span
-                        class="hidden lg:block font-label-md text-[11px] text-on-surface-variant font-medium tracking-normal">Business
-                        Integrity &amp; Risk Information Platform</span>
-                </div>
-            </a>
-            <nav class="hidden xl:flex items-center gap-1"
-                data-active-classes="bg-surface-container text-on-surface font-semibold rounded-lg"><a
-                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-                    data-path="home" href="#">Home</a><a aria-current="page"
-                    class="px-3 py-2 transition-colors bg-surface-container text-on-surface font-semibold rounded-lg"
-                    data-path="black-list" href="#">Black List</a><a
-                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-                    data-path="companies" href="#">Companies</a><a
-                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-                    data-path="background-verification" href="#">Background Verification</a><a
-                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-                    data-path="warning-news" href="#">Warning &amp; News</a><a
-                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-                    data-path="about-us" href="#">About Us</a><a
-                    class="px-3 py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-                    data-path="contact" href="#">Contact</a></nav>
-            <div class="flex items-center gap-3 shrink-0"><a
-                    class="flex items-center gap-2.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary transition-all font-body-md text-body-md font-medium"
-                    data-path="login" href="#"><span class="hidden sm:inline">User Account</span>
-                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
-                            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
-                </a><button
-                    class="xl:hidden p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
-                    type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div>
-        </div>
-    </header>
-    <main class="w-full pt-20 bg-surface min-h-screen">
+{% extends 'core/base.html' %}
+{% block title %}GUARDIAN (PBVS){% endblock %}
+{% block content %}
+<main class="w-full pt-20 bg-surface min-h-screen">
         <div class="flex flex-col w-full">
             <section class="w-full bg-surface-container-lowest py-10">
                 <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
@@ -122,7 +33,7 @@
                                 </div>
                             </div>
                             <a class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface transition-all font-body-md text-body-md font-medium"
-                                data-path="contact" href="#">
+                                href="{% url 'contact' %}">
                                 <span class="material-symbols-outlined text-[18px]">verified_user</span>
                                 <span>စိစစ်ချက်တောင်းခံရန်</span>
                             </a>
@@ -389,7 +300,7 @@
                                 <span class="font-label-md text-[11px] text-on-surface-variant">Updated: 12 Jan
                                     2026</span>
                                 <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
-                                    data-path="person-profile" href="#">
+                                    href="{% url 'blacklist' %}">
                                     <span>အသေးစိတ်ကြည့်ရန်</span>
                                     <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                                 </a>
@@ -460,7 +371,7 @@
                                 <span class="font-label-md text-[11px] text-on-surface-variant">Updated: 18 Jan
                                     2026</span>
                                 <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
-                                    data-path="person-profile" href="#">
+                                    href="{% url 'blacklist' %}">
                                     <span>အသေးစိတ်ကြည့်ရန်</span>
                                     <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                                 </a>
@@ -532,7 +443,7 @@
                                 <span class="font-label-md text-[11px] text-on-surface-variant">Updated: 02 Feb
                                     2026</span>
                                 <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
-                                    data-path="person-profile" href="#">
+                                    href="{% url 'blacklist' %}">
                                     <span>အသေးစိတ်ကြည့်ရန်</span>
                                     <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                                 </a>
@@ -603,7 +514,7 @@
                                 <span class="font-label-md text-[11px] text-on-surface-variant">Updated: 25 Jan
                                     2026</span>
                                 <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
-                                    data-path="person-profile" href="#">
+                                    href="{% url 'blacklist' %}">
                                     <span>အသေးစိတ်ကြည့်ရန်</span>
                                     <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                                 </a>
@@ -675,7 +586,7 @@
                                 <span class="font-label-md text-[11px] text-on-surface-variant">Updated: 05 Feb
                                     2026</span>
                                 <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
-                                    data-path="person-profile" href="#">
+                                    href="{% url 'blacklist' %}">
                                     <span>အသေးစိတ်ကြည့်ရန်</span>
                                     <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                                 </a>
@@ -745,7 +656,7 @@
                                 <span class="font-label-md text-[11px] text-on-surface-variant">Audited: 28 Jan
                                     2026</span>
                                 <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-medium transition-colors"
-                                    data-path="person-profile" href="#">
+                                    href="{% url 'blacklist' %}">
                                     <span>အသေးစိတ်ကြည့်ရန်</span>
                                     <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                                 </a>
@@ -839,7 +750,7 @@
                                     <span>Compliant with Myanmar Commercial Arbitration &amp; Audit Standards Act</span>
                                 </div>
                                 <a class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-container hover:bg-tertiary-container text-on-primary font-body-md text-body-md font-semibold transition-colors"
-                                    data-path="contact" href="#">
+                                    href="{% url 'contact' %}">
                                     <span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
                                     <span>အယူခံလွှာ / အချက်အလက်ပြင်ဆင်ရန် တောင်းဆိုချက် လျှောက်ထားပါ</span>
                                 </a>
@@ -889,7 +800,7 @@
     </main>
     <aside class="fixed bottom-6 left-6 z-40"><a
             class="flex items-center gap-2 px-4 py-3 rounded-full bg-error text-on-error shadow-[0_4px_16px_rgba(0,0,0,0.18)] hover:brightness-110 active:scale-95 transition-all"
-            data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">gavel</span><span
+            href="{% url 'contact' %}"><span class="material-symbols-outlined text-[20px]">gavel</span><span
                 class="font-label-md text-label-md font-bold tracking-normal">တိုင်ကြားရန် (Report)</span></a></aside>
     <footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
         <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-12">
@@ -925,27 +836,27 @@
                         Links</span>
                     <nav class="flex flex-col gap-2.5"><a
                             class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-                            data-path="home" href="#">Home</a><a
+                            href="{% url 'home' %}">Home</a><a
                             class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-                            data-path="black-list" href="#">Black List</a><a
+                            href="{% url 'blacklist' %}">Black List</a><a
                             class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-                            data-path="companies" href="#">Companies</a><a
+                            href="{% url 'companies' %}">Companies</a><a
                             class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-                            data-path="background-verification" href="#">Background Verification</a><a
+                            href="{% url 'verification' %}">Background Verification</a><a
                             class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-                            data-path="warning-news" href="#">Warning &amp; News</a></nav>
+                            href="{% url 'news' %}">Warning &amp; News</a></nav>
                 </div>
                 <div class="flex flex-col gap-3"><span
                         class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Organization</span>
                     <nav class="flex flex-col gap-2.5"><a
                             class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-                            data-path="about-us" href="#">About Us</a><a
+                            href="{% url 'about' %}">About Us</a><a
                             class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-                            data-path="contact" href="#">Contact</a><a
+                            href="{% url 'contact' %}">Contact</a><a
                             class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-                            data-path="person-profile" href="#">Person Directory</a><a
+                            href="{% url 'blacklist' %}">Person Directory</a><a
                             class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-                            data-path="company-profile" href="#">Company Registry</a></nav>
+                            href="{% url 'companies' %}">Company Registry</a></nav>
                 </div>
                 <div class="flex flex-col gap-3"><span
                         class="font-label-md text-label-md text-on-surface font-semibold tracking-wider uppercase">Legal
@@ -958,7 +869,7 @@
                             class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
                             href="#">Data Protection</a><a
                             class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
-                            data-path="contact" href="#">Appeal / Report</a></nav>
+                            href="{% url 'contact' %}">Appeal / Report</a></nav>
                 </div>
             </div>
             <div
@@ -970,6 +881,5 @@
             </div>
         </div>
     </footer>
-<section class="stitch-functional-panel"><div class="card"><h2>Approved Public Risk Records</h2><div class="responsive-table"><table><tr><th>Subject</th><th>Case Type</th><th>Risk</th><th>Last Update</th></tr>{% for record in risk_records %}<tr><td>{% if record.employee %}{{ record.employee.full_name }} ({{ record.employee.employee_id }}){% else %}{{ record.company.name }}{% endif %}</td><td>{{ record.case.case_type|default:'Risk Record' }}</td><td class="risk-{{ record.risk_level }}">{{ record.get_risk_level_display }}</td><td>{{ record.updated_at }}</td></tr>{% empty %}<tr><td colspan="4">No approved public records.</td></tr>{% endfor %}</table></div></div></section><script src="/static/js/guardian.js"></script></body>
-
-</html>
+<section class="stitch-functional-panel"><div class="card"><h2>Approved Public Risk Records</h2><div class="responsive-table"><table><tr><th>Subject</th><th>Case Type</th><th>Risk</th><th>Last Update</th></tr>{% for record in risk_records %}<tr><td>{% if record.employee %}{{ record.employee.full_name }} ({{ record.employee.employee_id }}){% else %}{{ record.company.name }}{% endif %}</td><td>{{ record.case.case_type|default:'Risk Record' }}</td><td class="risk-{{ record.risk_level }}">{{ record.get_risk_level_display }}</td><td>{{ record.updated_at }}</td></tr>{% empty %}<tr><td colspan="4">No approved public records.</td></tr>{% endfor %}</table></div></div></section>
+{% endblock %}
